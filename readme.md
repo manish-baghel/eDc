@@ -1,8 +1,8 @@
-BASIC WEB APPLICATION using GULP
+BASIC WEB APPLICATION eDC using GULP Frontend Stuff oonly
 
 Don't forget to run $ npm install
 If things don't workout then follow below code:-
-DO install various node modules:-
+Do install various node modules:-
  1.  $ npm install gulp --save-dev
  2.  $ npm install gulp-sass --save-dev
  3.  $ npm install browser-sync --save-dev
