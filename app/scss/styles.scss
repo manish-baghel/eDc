@@ -1,6 +1,211 @@
-.testing{
-    width: percentage(5/7);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
-    background-color: purple;
+a{
+    text-decoration: none;
+    color: white;
+}
+
+//Animations
+@keyframes slide {
+    0% {
+        left: 0%;
+    }
+    17% {
+        left: 0%;
+    }
+    20% {
+        left: -100%;
+    }
+    37% {
+        left: -100%;
+    }
+    40% {
+        left: -200%;
+    }
+    57% {
+        left: -200%;
+    }
+    60% {
+        left: -300%;
+    }
+    77% {
+        left: -300%;
+    }
+    80% {
+        left: -400%;
+    }
+    100% {
+        left : -400%;
+    }
+}
+
+
+
+
+
+.navbar{
+    color: white;
+}
+.navbar-default{
+    background-color: rgba(255,255,255,0.6)!important;
+    border: 0;
+    color: white;
+    transition: background-color 1.2s ease ;
+    .navbar-nav{
+        li{
+            a{
+                color: #000;
+                font-size: 1.3em;
+                font-weight: lighter;
+            }
+        }
+    }
+    .navbar-header{
+        a{
+            color: #000;
+            font-size: 2.1em;
+            font-weight: lighter;
+        }
+    }
+}
+/* opaque navbar */
+
+.navbar-default.opaque {
+    background-color: #737373!important;
+    transition: background-color 1.2s ease ;
+    .navbar-nav{
+        li{
+            a{
+                color: #eee;
+                font-size: 1.3em;
+                font-weight: lighter;
+            }
+        }
+    }
+    .navbar-header{
+        a{
+            color: #eee;
+            font-size: 2.1em;
+            font-weight: lighter;
+        }
+    }
+}
+
+ul.dropdown-menu {
+    background-color: black;
+}
+
+#banner{
+    width: 100vw;
+    height: 90vh;
+    .container{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        #banner-image{
+            height: 100%;
+            overflow: hidden;
+            figure{
+                position: relative;
+                width: 500%;
+                height: 100%;
+                margin: 0;
+                left: 0;
+                text-align: left;
+                font-size: 0;
+                animation: linear 30s slide infinite none;
+                div{
+                    height: 100%;
+                    width: 20%;
+                    float: left;
+                    background-position: center;
+                    background-size: cover;
+                    background-attachment: fixed;
+                }
+            }
+        }
+    }
+}
+#quotes{
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    font-weight: lighter;
+    q{
+        left: 50%;
+        display: inline;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 4em;
+    }
+}
+
+
+#about{
+    height: 500px;
+    .container{
+        padding-top: 20px;
+        header{
+            width:100%;
+            height: 10vh;
+            text-align: center;
+            font-size: 4em;
+            font-weight: 300;
+        }
+        .row{
+            height: 300px;
+            .about-image{
+                height: 100%;
+                background-image: url(../images/aboutImage.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+#counter{
+    height: 150px;
+    width: 100%;
+    background-image: url(../images/carousel-1.jpg);
+    background-origin: center;
+    background-size: cover;
+    background-attachment: fixed;
+    .row{
+        margin-top: 5vh;
+        color: #eee;
+        font-weight: 200;
+        .number{
+            border-right: 2px solid rgb(200,200,200);
+            font-size: 4em;
+            &:nth-child(3){
+                border-right: 0;
+            }
+            padding-left: 10%;
+        }
+        
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px){
+    #counter{
+        .row{
+            .number{
+                font-size: 3em;
+            }
+        }
+    }
+}
+@media screen and (max-width:479px){
+    #counter{
+        .row{
+            .number{
+                font-size: 2em;
+            }
+        }
+    }
 }

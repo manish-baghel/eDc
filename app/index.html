@@ -1,9 +1,108 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-    </head>
-    <body>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>E-Cell IITD</title>
+    <link href="https://fonts.googleapis.com/css?family=BenchNine" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+</head>
+<body>
+<!-- NavBar  -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">E-cell</a> 
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#banner">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#about">Our Team</a></li>
+            <li><a href="#about">Events</a></li>
+            <li><a href="#about">Initiatives</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+<!--Banner Container-->
+    <section id="banner">
+        <div class="container">
+            <div id="banner-image">
+                <figure>
+                    <div style="background-image:url(../images/carousel-1.jpg);"></div>
+                    <div style="background-image:url(../images/carousel-2.jpg);"></div>
+                    <div style="background-image:url(../images/carousel-3.jpg);"></div>
+                    <div style="background-image:url(../images/carousel-4.jpg);"></div>
+                    <div style="background-image:url(../images/carousel-5.jpg);"></div>
+                </figure>
+            </div>
+            <div id="banner-text"></div>
+        </div>
+    </section>
+    
+<!-- Quotes   -->
+<!--
+    <section id="quotes">
+        <q>The true entrepreneur is a doer, not a dreamer</q>
+    </section>
+-->
+<!-- About Us Content   -->
+    <section id="about">
+        <div class="container">
+           <header id="about-header">About Us</header>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-8"></div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Counter -->
+    <section id="counter">
+        <div class="container">
+            <div class="row">
+                <div id="num1 illdy_counter-4" class="number col-xs-4 col-md-4 col-sm-4 widget_illdy_counter">
+                <span class="counter-number" data-from="1" data-to="450" data-speed="2000" data-refresh-interval="100">450</span>
+                </div>
+                <div id="num2 illdy_counter-3" class="number col-xs-4 col-md-4 col-sm-4 widget_illdy_counter">
+                <span class="counter-number" data-from="1" data-to="120" data-speed="2000" data-refresh-interval="100">120</span>
+                </div>
+                <div id="num3 illdy_counter-2" class="number col-xs-4 col-md-4 col-sm-4 widget_illdy_counter">
+                <span class="counter-number" data-from="1" data-to="110" data-speed="2000" data-refresh-interval="210">110</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/count-to.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/script.js"></script>
+<script>
+    window.sr = ScrollReveal();
+    sr.reveal('#about-header',{
+        duration:1000,
+        distance:'40px',
+        viewFactor:0.9
+    });
+    sr.reveal('.about-image',{
+        duration:1000,
+        origin:'left',
+        distance:'40px',
+        viewFactor:0.8
+    });
+</script>
+</body>
 </html>
