@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>E-Cell IITD</title>
     <link href="https://fonts.googleapis.com/css?family=BenchNine" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
@@ -20,37 +21,72 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">E-cell</a> 
+          <a class="navbar-brand" href="#">
+          E-Cell
+<!--              <img src="../images/logo.jpg" alt="">-->
+          </a> 
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#banner">Home</a></li>
             <li><a href="#about">About Us</a></li>
-            <li><a href="#about">Our Team</a></li>
+            <li><a href="#programs">Our Programs</a></li>
             <li><a href="#about">Events</a></li>
-            <li><a href="#about">Initiatives</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="login.html">Login/Signup</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    
 <!--Banner Container-->
     <section id="banner">
         <div class="container">
             <div id="banner-image">
                 <figure>
-                    <div style="background-image:url(../images/carousel-1.jpg);"></div>
-                    <div style="background-image:url(../images/carousel-2.jpg);"></div>
-                    <div style="background-image:url(../images/carousel-3.jpg);"></div>
-                    <div style="background-image:url(../images/carousel-4.jpg);"></div>
-                    <div style="background-image:url(../images/carousel-5.jpg);"></div>
+                    <div class='banner-div' style="background-image:url(../images/carousel-1.jpg);">
+                        <div class="banner-text">
+                            <div class="hero-text">Lorem Ipsum</div>
+                            <div class="sub-text">
+                                consectetur adipisicing elit Quas consequuntur assumenda et saepe dignissimos non officia tempora
+                            </div>
+                        </div>
+                    </div>
+                    <div class='banner-div' style="background-image:url(../images/carousel-2.jpg);">
+                        <div class="banner-text">
+                            <div class="hero-text">Lorem Ipsum</div>
+                            <div class="sub-text">
+                                consectetur adipisicing elit consectetur quam harum amet numquam nesciunt odit molestiae aperiam
+                            </div>
+                        </div>
+                    </div>
+                    <div class='banner-div' style="background-image:url(../images/carousel-3.jpg);">
+                    <div class="banner-text">
+                            <div class="hero-text">Lorem Ipsum</div>
+                            <div class="sub-text">
+                                consectetur adipisicing elit cupiditate ratione voluptatem asperiores. Accusantium
+                            </div>
+                        </div>
+                    </div>
+                    <div class='banner-div' style="background-image:url(../images/carousel-4.jpg);">
+                        <div class="banner-text">
+                            <div class="hero-text">Lorem Ipsum</div>
+                            <div class="sub-text">
+                                consectetur adipisicing elit Pariatur, ea. Quas consequuntur assumenda et saepe dignissimos non officia
+                            </div>
+                        </div>
+                    </div>
+                    <div class='banner-div' style="background-image:url(../images/carousel-5.jpg);">
+                    <div class="banner-text">
+                            <div class="hero-text">Lorem Ipsum</div>
+                            <div class="sub-text">
+                                consectetur adipisicing elit molestiae aperiam, at, cupiditate ratione voluptatem asperiores
+                            </div>
+                        </div>
+                    </div>
                 </figure>
             </div>
-            <div id="banner-text"></div>
         </div>
     </section>
-    
 <!-- Quotes   -->
 <!--
     <section id="quotes">
@@ -62,28 +98,126 @@
         <div class="container">
            <header id="about-header">About Us</header>
             <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-8"></div>
+                <div class="col-md-4 about-image">
+                    <img src="" alt="" class="">
+                </div>
+                <div class="col-md-8 about-content">
+                    eDC is the Entrepreneurial Club of IIT Delhi managed and run by a set of enthusiastic students aiming to create a sustainable and diverse entrepreneurial ecosystem where the young and elderly can come together to take Entrepreneurship a step ahead in India.
+                    <header id="vision">
+                        Our Vision
+                    </header>
+                    Entrepreneurship in India is yet to reveal its hidden potential. It will not only help India to frontier with the world leaders but also unlock the quality of brains that we are so proud of. With this idea, the Entrepreneurship Development Cell of IIT Delhi (eDC) wishes to inculcate and enrich the entrepreneurial environment in India by creating an easily accessible and exhaustive set of resources for the entrepreneurs as well as the students, the budding professionals, mentors, angel investors and the venture capitalists through various fun-filled yet educating sessions such as Startup Showcases, competitions, eTalks and so on and so forth.
+                </div>
             </div>
         </div>
     </section>
-    
 <!-- Counter -->
-    <section id="counter">
+    <section id="counter" class="parallax">
         <div class="container">
             <div class="row">
-                <div id="num1 illdy_counter-4" class="number col-xs-4 col-md-4 col-sm-4 widget_illdy_counter">
-                <span class="counter-number" data-from="1" data-to="450" data-speed="2000" data-refresh-interval="100">450</span>
+                <div class="counter-value col-xs-4 col-md-4 col-sm-4" data-count="740">450
                 </div>
-                <div id="num2 illdy_counter-3" class="number col-xs-4 col-md-4 col-sm-4 widget_illdy_counter">
-                <span class="counter-number" data-from="1" data-to="120" data-speed="2000" data-refresh-interval="100">120</span>
+                <div class="counter-value col-xs-4 col-md-4 col-sm-4" data-count="370">120
                 </div>
-                <div id="num3 illdy_counter-2" class="number col-xs-4 col-md-4 col-sm-4 widget_illdy_counter">
-                <span class="counter-number" data-from="1" data-to="110" data-speed="2000" data-refresh-interval="210">110</span>
+                <div class="counter-value col-xs-4 col-md-4 col-sm-4" data-count="545">110
                 </div>
             </div>
         </div>
     </section>
+<!-- Programs   -->
+    <section id="programs">
+        <div class="container">
+           <header id="programs-header">Our Programs</header>
+            <div class="row">
+               <div class="col-md-5 col-sm-5">
+                   <div id="s1" class="row non-highlight highlight">
+                       <div class="uppertext">Startup 101</div>
+                       <div class="lowertext">Aimed at inspiring people who are new to Entrepreneurship to take it up as a career choice, this program intends to foster the spirit of Entrepreneurship among the student community through memoirs of successful businessmen, panel discussions and case study challenges.</div>
+                   </div>
+                   <div id="s2" class="row non-highlight">
+                       <div class="uppertext">Startup 201</div>
+                       <div class="lowertext">This program is directed towards people who are already into the Startup Bandwagon and intend to start a business of their own. Through a series of 8 lectures, this initiative wishes to enhance the knowledge of these wantrepreneurs. Loosely based on ‘How to start a Startup Course’ by Y Combinator, this program is being held once a week in association with Ivy Cap Ventures.</div>
+                   </div>
+                   <div id="fd" class="row non-highlight">
+                       <div class="uppertext">Founder Diaries</div>
+                       <div class="lowertext">This year, eDC is launching ‘Founder Diaries’, a one of its kind initiatives where seasoned founders who are also alumni of IIT Delhi share their Startup and Product journey with students and early stage Entrepreneurs thus inspiring them to do something big in their own lives.</div>
+                   </div>
+               </div>
+               <div id="programs_image"class="col-md-offset-1 col-sm-offset-1 col-md-6 col-sm-6"></div>
+            </div>
+        </div>
+    </section>
+<!-- About Us Content   -->
+    <section id="about">
+        <div class="container">
+           <header id="about-header">About Us</header>
+            <div class="row">
+                <div class="col-md-4 about-image">
+                    <img src="" alt="" class="">
+                </div>
+                <div class="col-md-8 about-content">
+                    eDC is the Entrepreneurial Club of IIT Delhi managed and run by a set of enthusiastic students aiming to create a sustainable and diverse entrepreneurial ecosystem where the young and elderly can come together to take Entrepreneurship a step ahead in India.
+                    <header id="vision">
+                        Our Vision
+                    </header>
+                    Entrepreneurship in India is yet to reveal its hidden potential. It will not only help India to frontier with the world leaders but also unlock the quality of brains that we are so proud of. With this idea, the Entrepreneurship Development Cell of IIT Delhi (eDC) wishes to inculcate and enrich the entrepreneurial environment in India by creating an easily accessible and exhaustive set of resources for the entrepreneurs as well as the students, the budding professionals, mentors, angel investors and the venture capitalists through various fun-filled yet educating sessions such as Startup Showcases, competitions, eTalks and so on and so forth.
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Footer   -->
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-8 col-md-offset-0 col-sm-offset-0 col-xs-offset-2 main-links clearfix">
+                <ul class="links">
+                    <li><div class="link-icon"><i class="fa fa-home"></i></div>Home</li>
+                    <li><div class="link-icon"><i class="fa fa-info"></i></div>About Us</li>
+                    <li><div class="link-icon"><i class="fa fa-lock"></i></div>Privacy Policy</li>
+                    <li><div class="link-icon"><i class="fa fa-book"></i></div>Terms &amp; Condition</li>
+                    <li><div class="link-icon"><i class="fa fa-warning"></i></div>Disclaimer</li>
+                </ul>
+            </div>
+            <div class="col-md-3 hidden-sm hidden-xs categories-links clearfix">
+               <header>Categories</header>
+                <ul class="links">
+                    <li>Lorem</li>
+                    <li>Ipsum</li>
+                    <li>Dolor</li>
+                    <li>Sit</li>
+                    <li>Amet</li>
+                    <li>Ipsum</li>
+                    <li>Dolor</li>
+                </ul>
+                <ul class="links links-right">
+                    <li>Slapstick</li>
+                    <li>Lorem</li>
+                    <li>Ipsum</li>
+                    <li>Dolor</li>
+                    <li>Sit</li>
+                    <li>Amet</li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-5 col-xs-8 col-md-offset-0 col-sm-offset-0 col-xs-offset-2 form">
+                <header>Contact Us</header>
+                <form method="post">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Message" class="message"></textarea>
+                    <input type="submit" value="Send" id="send-button">
+                </form>
+            </div>
+            <div class="col-md-2 col-sm-3 col-md-offset-0 col-sm-offset-0 col-xs-offset-4 col-xs-4 social-media">
+                <div href="#" id="facebook-login">
+                   <i class="fa fa-facebook-official" area hidden="true"></i>
+                   <span>Facebook Login</span>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="footer-black">Copyright @ 2017 E-Cell IIT Delhi</div>
+    </section>
+   
 
 
 <script src="js/jquery.js"></script>
@@ -92,7 +226,30 @@
 <script src="js/script.js"></script>
 <script>
     window.sr = ScrollReveal();
+    sr.reveal('.navbar', {
+        duration: 1000,
+        origin:'top'
+    });
+    sr.reveal('.hero-text',{
+        duration:1000,
+        viewFactor:0.1,
+        delay:1000,
+        origin:'left',
+        distance:'40px'
+    });
+    sr.reveal('.sub-text',{
+        duration:1000,
+        viewFactor:0.1,
+        origin:'left',
+        delay:1000,
+        distance:'40px'
+    });
     sr.reveal('#about-header',{
+        duration:1000,
+        distance:'40px',
+        viewFactor:0.9
+    });
+    sr.reveal('#programs-header',{
         duration:1000,
         distance:'40px',
         viewFactor:0.9
@@ -102,6 +259,45 @@
         origin:'left',
         distance:'40px',
         viewFactor:0.8
+    });
+    sr.reveal('#s1',{
+        duration:600,
+        viewFactor:0.1,
+        origin:'left',
+        distance:'40px'
+    });
+    sr.reveal('#s2',{
+        duration:600,
+        viewFactor:0.1,
+        delay:300,
+        origin:'left',
+        distance:'40px'
+    });
+    sr.reveal('#fd',{
+        duration:600,
+        viewFactor:0.1,
+        delay:600,
+        origin:'left',
+        distance:'40px'
+    });
+    sr.reveal('#programs_image',{
+        duration:1000,
+        viewFactor:0.1,
+        origin:'right',
+        distance:'1000px'
+    });
+    sr.reveal('.about-content',{
+        duration:1000,
+        viewFactor:0.1,
+        origin:'right',
+        distance:'1000px'
+    });
+    sr.reveal('#vision',{
+        duration:1000,
+        viewFactor:0.2,
+        delay:1000,
+        origin:'bottom',
+        distance:'30px'
     });
 </script>
 </body>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Sign-Up/Login Form</title>
+  <link href="https://fonts.googleapis.com/css?family=BenchNine" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body style="background:url('images/carousel-1.jpg');">
+<!-- NavBar  -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+          E-Cell
+<!--              <img src="../images/logo.jpg" alt="">-->
+          </a> 
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#banner">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#programs">Our Programs</a></li>
+            <li><a href="#about">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="login.html">Login/Signup</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<!-- login/signup section -->
+ <section id="login-signup">
+    <div class="form">
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Sign Up</a></li>
+        <li class="tab"><a href="#login">Log In</a></li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="signup">   
+          <h1>Sign Up</h1>
+          
+          <form action="/" method="post">
+          
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input type="text" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off"/>
+            </div>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Set A Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off"/>
+          </div>
+          <span class="agreement">By clicking Join now, you agree to the E-cell User Agreement, Privacy Policy, and Cookie Policy.</span>
+          <button type="submit" class="button button-block">Get Started</button>
+          
+          </form>
+
+        </div>
+        
+        <div id="login">   
+          <h1>Welcome Back!</h1>
+          
+          <form action="/" method="post">
+          
+            <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off"/>
+          </div>
+          
+          <p class="forgot"><a href="#">Forgot Password?</a></p>
+          <button class="button button-block">Log In</button>
+          
+          </form>
+
+        </div>
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form --> 
+ </section>
+ <!-- Footer   -->
+<section id="footer">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-8 col-md-offset-0 col-sm-offset-0 col-xs-offset-2 main-links clearfix">
+                <ul class="links">
+                    <li><div class="link-icon"><i class="fa fa-home"></i></div>Home</li>
+                    <li><div class="link-icon"><i class="fa fa-info"></i></div>About Us</li>
+                    <li><div class="link-icon"><i class="fa fa-lock"></i></div>Privacy Policy</li>
+                    <li><div class="link-icon"><i class="fa fa-book"></i></div>Terms &amp; Condition</li>
+                    <li><div class="link-icon"><i class="fa fa-warning"></i></div>Disclaimer</li>
+                </ul>
+            </div>
+            <div class="col-md-3 hidden-sm hidden-xs categories-links clearfix">
+               <header>Categories</header>
+                <ul class="links">
+                    <li>Lorem</li>
+                    <li>Ipsum</li>
+                    <li>Dolor</li>
+                    <li>Sit</li>
+                    <li>Amet</li>
+                    <li>Ipsum</li>
+                    <li>Dolor</li>
+                </ul>
+                <ul class="links links-right">
+                    <li>Slapstick</li>
+                    <li>Lorem</li>
+                    <li>Ipsum</li>
+                    <li>Dolor</li>
+                    <li>Sit</li>
+                    <li>Amet</li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-5 col-xs-8 col-md-offset-0 col-sm-offset-0 col-xs-offset-2 form">
+                <header>Contact Us</header>
+                <form method="post">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Message" class="message"></textarea>
+                    <input type="submit" value="Send" id="send-button">
+                </form>
+            </div>
+            <div class="col-md-2 col-sm-3 col-md-offset-0 col-sm-offset-0 col-xs-offset-4 col-xs-4 social-media">
+                <div href="#" id="facebook-login">
+                   <i class="fa fa-facebook-official" area hidden="true"></i>
+                   <span>Facebook Login</span>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="footer-black">Copyright @ 2017 E-Cell IIT Delhi</div>
+    </section>
+  
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script  src="js/login.js"></script>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+</body>
+</html>
