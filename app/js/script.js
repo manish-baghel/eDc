@@ -17,7 +17,7 @@ $(window).scroll(function() {
             console.log($(window).width());
             $('.parallax').css("background-position-y",z);
         }
-        if($(this).scrollTop() > 600)  /*height in pixels when the navbar becomes non opaque*/ 
+        if($(this).scrollTop() > 300)  /*height in pixels when the navbar becomes non opaque*/ 
         {
             $('.navbar-default').addClass('opaque');
         } else {
@@ -54,40 +54,91 @@ $(window).scroll(function() {
     a = 1;
   }
 });
+var next = $(".next");
+var prev = $(".prev");
 var s1 = $("#s1");
 var s2 = $("#s2");
 var fd = $("#fd");
 var img = $("#programs_image");
 img.addClass('background1');
-s1.click(function (){
+next.click(function(){
+    if(s1.hasClass("highlight")){
+        fd.removeClass('highlight');
+        s1.removeClass('highlight');
+        s2.addClass('highlight');
+        img.removeClass('background3');
+        img.removeClass('background1');
+        img.addClass('background2');
+    }
+    else if(s2.hasClass("highlight")){
+        s2.removeClass('highlight');
+        s1.removeClass('highlight');
+        fd.addClass('highlight');
+        img.removeClass('background1');
+        img.removeClass('background2');
+        img.addClass('background3');
+    }
+    else{
+       s2.removeClass('highlight');
+        fd.removeClass('highlight');
+        s1.addClass('highlight');
+        img.removeClass('background2');
+        img.removeClass('background3');
+        img.addClass('background1'); 
+    }
+});
+
+prev.click(function(){
+    if(s1.hasClass("highlight")){
+        s2.removeClass('highlight');
+        s1.removeClass('highlight');
+        fd.addClass('highlight');
+        img.removeClass('background1');
+        img.removeClass('background2');
+        img.addClass('background3');
+    }
+    else if(s2.hasClass("highlight")){
+        s2.removeClass('highlight');
+        fd.removeClass('highlight');
+        s1.addClass('highlight');
+        img.removeClass('background2');
+        img.removeClass('background3');
+        img.addClass('background1'); 
+    }
+    else{
+        fd.removeClass('highlight');
+        s1.removeClass('highlight');
+        s2.addClass('highlight');
+        img.removeClass('background3');
+        img.removeClass('background1');
+        img.addClass('background2');
+    }
+});
+
+s1.click(function(){
     s2.removeClass('highlight');
-    fd.removeClass('highlight');
     s1.addClass('highlight');
+    fd.removeClass('highlight');
+    img.addClass('background1');
     img.removeClass('background2');
     img.removeClass('background3');
-    img.addClass('background1');
 });
-    
-s2.click(function () {
-    fd.removeClass('highlight');
+s2.click(function(){
     s1.removeClass('highlight');
     s2.addClass('highlight');
-    img.removeClass('background3');
-    img.removeClass('background1');
+    fd.removeClass('highlight');
     img.addClass('background2');
-    
-});
-
-fd.click(function () {
-    s2.removeClass('highlight');
-    s1.removeClass('highlight');
-    fd.addClass('highlight');
     img.removeClass('background1');
-    img.removeClass('background2');
-    img.addClass('background3');
-    
+    img.removeClass('background3');
 });
-
+fd.click(function(){
+    s2.removeClass('highlight');
+    fd.addClass('highlight');
+    s1.removeClass('highlight');
+    img.addClass('background3');
+    img.removeClass('background2');
+    img.removeClass('background1');
+});
 
 
 (function appinstance(){

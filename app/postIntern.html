@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+      <title>Post an Internship</title>
+      <link href="https://fonts.googleapis.com/css?family=BenchNine" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!-- NavBar  -->
+<nav class="navbar navbar-default  navbar-fixed-top" style="background-color: #353535!important;">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/#" style=" color: #eee!important;">
+          E-Cell
+<!--              <img src="../images/logo.jpg" alt="">-->
+          </a> 
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/#banner"style=" color: #eee!important;">Home</a></li>
+            <li><a href="/#about"style=" color: #eee!important;">About Us</a></li>
+            <li><a href="/#programs"style=" color: #eee!important;">Our Programs</a></li>
+            <li><a href="/#about"style=" color: #eee!important;">Events</a></li>
+            <li><a href="/#contact"style=" color: #eee!important;">Contact</a></li>
+            <li><a href="login.html"style=" color: #eee!important;">Login/Signup</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<section id="intern_posting">
+    <div class="container-fluid">
+        <div class="max-width-container">
+            <div id="content-inner">
+<!--
+            <div id="menu-edit-profile">
+                <div class="tab-container" id="personal_details_tab" url="">
+        <div class="tab">
+            <div class="table-cell menu-icon">
+                <span class="glyphicon glyphicon-user"></span>
+            </div>
+            <div class="table-cell menu-content hidden-xs">
+                Personal Details
+            </div>
+        </div>
+    </div>
+                <div class="tab-container" id="organization_details_tab" url="">
+        <div class="tab">
+            <div class="table-cell menu-icon">
+                <i class="fa fa-building-o"></i>
+            </div>
+            <div class="table-cell menu-content hidden-xs">
+                Organization Details
+            </div>
+        </div>
+    </div>
+                <div class="tab-container" id="internship_details_tab" url="">
+        <div class="tab active">
+            <div class="table-cell menu-icon">
+                <i class="fa fa-file-text"></i>
+            </div>
+            <div class="table-cell menu-content hidden-xs">
+                Post Internship
+            </div>
+        </div>
+    </div>
+            </div>            
+-->
+            <p class="text-center">
+                Need assistance? Please write to us at <a href="mailto:queries@ecell-iitd.com">
+                    queries@ecell-iitd.com
+                </a>
+            </p>
+            <div id="form-container">
+                <h4 class="text-center">Post Internship</h4>
+                <form role="form" class="employer_registration" id="post_internship" name="post_internship" enctype="multipart/form-data" novalidate="novalidate" method="post" action="/#">
+                    <div class="section clearfix" id="about_section">
+                        <h5>About the internship</h5>
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group" id="profile-container">
+                            <label for="profile" class="control-label head_label">
+                                Select primary profile*:
+                            </label>
+                            <div class="profile_radio_container clearfix">
+                                <div class="profile_radio ">
+                                    <label>
+                                <input type="radio" name="profile_primary" class="profile_primary_radio_button" value="Business Development" id="Business Development"> Business Development       
+                            </label>
+                                </div>
+                                <div class="profile_radio ">
+                            <label>
+                                <input type="radio" name="profile_primary" class="profile_primary_radio_button" value="Web Development" id="Web Development"> Web Development
+                            </label>
+                        </div>
+                                <div class="profile_radio ">
+                    <label>
+                        <input type="radio" name="profile_primary" class="profile_primary_radio_button" value="Graphic Design" id="Graphic Design"> Graphic Design
+                    </label>
+                    </div>
+                                <div class="profile_radio ">
+                    <label>
+                        <input type="radio" name="profile_primary" class="profile_primary_radio_button" value="Content Writing" id="Content Writing"> Content Writing          
+                    </label>
+                    </div>
+                                <div class="profile_radio ">
+                    <label>
+                        <input type="radio" name="profile_primary" class="profile_primary_radio_button" value="Social Media Marketing" id="Social Media Marketing"> Social Media Marketing
+                    </label>
+                    </div>
+                                <div class="profile_radio ">
+                    <label>
+                        <input type="radio" name="profile_primary" class="profile_primary_radio_button" value="Marketing" id="Marketing"> Marketing                    </label>
+                    </div>
+                                <div class="profile_radio ">
+                    <label>
+                        <input type="radio" name="profile_primary" class="profile_primary_radio_button" value="Operations" id="Operations"> Operations                    </label>
+                    </div>
+                                <div class="profile_radio ">
+                    <label>
+                        <input type="radio" name="profile_primary" class="profile_primary_radio_button" value="Mobile App Development" id="Mobile App Development"> Mobile App Development                    </label>
+                    </div>
+                                <div class="profile_radio ">
+                    <label>
+                        <input type="radio" name="profile_primary" class="profile_primary_radio_button" value="Digital Marketing" id="Digital Marketing"> Digital Marketing                    </label>
+                    </div>
+                                <div class="profile_radio ">
+                    <label>
+                        <input type="radio" name="profile_primary" class="profile_primary_radio_button" value="Human Resources (HR)" id="Human Resources (HR)"> Human Resources (HR)                    </label>
+                    </div>
+                                <div class="profile_radio ">
+                    <label>
+                        <input type="radio" name="profile_primary" class="profile_primary_radio_button" value="Law/ Legal" id="Law/ Legal"> Law/ Legal                    </label>
+                    </div>
+                                <div class="profile_radio ">
+                                    <label>
+                                        <input type="radio" name="profile_primary" class="profile_primary_radio_button" value="Campus Ambassador" id="Campus Ambassador"> Campus Ambassador       
+                                    </label>
+                    </div>
+                            </div>
+                            <div class="profile_input_container" style="">
+                                <label>
+                                    <input type="text" class="form-control ui-autocomplete-input" id="profile" name="profile_input" placeholder="Type your internship profile" value="" autocomplete="off">
+                                    Other
+                                </label>
+                            </div>
+                            <div class="profile_suggestion"></div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12" id="inner_section_container" style="">
+                            <div class="form-group internship_specific_info " id="type_container">
+                            <label for="type" class="control-label head_label">Select type of internship*</label>
+                            <div class="type_radio_container">
+                                <div class="type_radio col-md-6 col-sm-12 col-xs-12">
+                    <label>
+                        <input type="radio" name="type" value="regular" checked=""> Regular (In-office/On-field)
+                    </label>
+                </div>
+                                <div class="type_radio col-md-6 col-sm-12 col-xs-12">
+                    <label id="virtual">
+                        <input type="radio" name="type" value="virtual"> Work from home
+                    </label>
+                </div>
+                            </div>
+                        </div>
+                            <div class="form-group" id="no_of_openings_container" >
+            <label for="open_positions" class="control-label">Number of openings* <span class="label_hint">(Enter only numbers)</span></label>
+            <input type="number" value="" class="form-control" id="open_positions" name="open_positions" placeholder="Type the number of interns you want to hire" validators="required">
+        </div>
+                            <div class="form-group" id="starts_on_container">
+            <label class="control-label">Internship start date*</label>
+            <div id="later_date_option_container">
+                <div class="later_date_option">
+                    Between 
+                    <input type="date" value="" class="form-control hasDatepicker" id="start_date_1" name="start_date_1" placeholder="Choose date">
+                </div>
+                <div class="later_date_option">
+                    to 
+                    <input type="date" value="" class="form-control hasDatepicker" id="start_date_2" name="start_date_2" placeholder="Choose date">
+                </div>
+            </div>
+        </div>
+                        </div>
+                    </div>
+                    <div class="section" id="responsibility_section">
+    <h5>Intern's Responsibilities</h5>
+    <div class="form-group">
+        <div id="jd_container_inner">
+            <label id="intern_responsibilities_description" class="control-label">Write a detailed yet crisp description of intern's responsibilities and convey the excitement of the role *:</label>
+            <textarea class="form-control" id="description" name="description" resize="false"></textarea>
+        </div>
+    </div>
+</div>
+                    <div class="section" id="stipend_perks_section">
+    <h5 id="stipend_section_heading">Stipend &amp; Perks</h5>
+    <div class="form-group internship_specific_info">
+                <label for="stipend_type" class="control-label">Stipend*: </label>
+        <div id="stipend_type_options_container">
+            <label>
+                <input type="radio" name="stipend_type" id="stipend-fixed" value="fixed" checked="" class="stipend_type">
+                Fixed
+            </label>
+            <label>
+                <input type="radio" name="stipend_type" id="stipend-unpaid" value="unpaid" class="stipend_type">
+                Unpaid
+            </label>
+        </div>
+        <div id="stipend_type_message_container">
+        </div>
+        <div class="" id="stipendvalue" style="display: block;">
+            <div class="stipendvalue_component">
+                <input id="salary" class="small-text-box" name="salary" value="" type="text" maxlength="8" placeholder="Ex:5000">
+            </div>
+            <div class="stipendvalue_component">
+                <select id="salary_scale" name="salary_scale" validators="salary::salary">
+                    <option value="perweek">/ Week</option>
+                    <option value="permonth" selected="">/ Month</option>
+                    <option value="lumpsum">Lump-Sum</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label> Perks </label>
+        <div class="perks_options_container">
+            <div class="perks_options">
+                <label>
+                    <input type="checkbox" name="certificate" id="certificate" checked="">
+                    Certificate
+                </label>
+            </div>
+            <div class="perks_options">
+                <label>
+                    <input type="checkbox" name="is_lor_provided" id="is_lor_provided">
+                    Letter of recommendation
+                </label>
+            </div>
+            <div class="perks_options">
+                <label>
+                    <input type="checkbox" name="job_prospect" id="job_prospect">
+                    Pre placement offer
+                </label>
+            </div>
+            <div class="perks_options">
+                <label>
+                    <input type="checkbox" name="is_flexible_work_hours_allowed" id="is_flexible_work_hours_allowed">
+                    Flexible work hours
+                </label>
+            </div>
+            <div class="perks_options regular_perk_option">
+                <label>
+                    <input class="regular_perk_checkbox" type="checkbox" name="is_informal_dress_code_allowed" id="is_informal_dress_code_allowed">
+                    Informal dress code
+                </label>
+            </div>
+            <div class="perks_options">
+                <label>
+                    <input type="checkbox" name="is_five_days_a_week_allowed" id="is_five_days_a_week_allowed">
+                    5 days a week
+                </label>
+            </div>
+            <div class="perks_options regular_perk_option">
+                <label>
+                    <input class="regular_perk_checkbox" type="checkbox" name="is_snacks_allowed" id="is_snacks_allowed">
+                    Free snacks &amp; beverages
+                </label>
+            </div>
+            &nbsp;
+        </div>
+    </div>
+    
+
+</div>
+                    <div class="section" id="who_can_apply_section">
+                        <h5>Who can apply</h5>
+                        <div class="form-group">
+        <label for="skills" class="control-label">Skill(s) that you are looking for: <span class="label_hint">(Type one or more skills) (Recommended)</span></label>
+        <input type="text" value="" class="form-control ui-autocomplete-input" id="skills" name="skill" placeholder="Ex: PHP, Adobe Photoshop, MS-Office, English Proficiency etc" validators="required" autocomplete="off">
+    </div>
+                    </div>
+                    <div id="button_container_section" style="clear:both;">
+                        <input class="btn btn-primary pull-right" style="font-size: 16px;" id="publish" value="Post Internship" type="submit">
+                        <input class="btn btn-link pull-right" id="save" value="Save Draft" type="submit">&nbsp;
+                    </div>
+                </form>
+                <br><br>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer   -->
+<section id="footer">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-3 col-sm-4 col-xs-8 col-md-offset-0 col-sm-offset-0 col-xs-offset-2 main-links clearfix">
+                <ul class="links">
+                    <li><div class="link-icon"><i class="fa fa-home"></i></div>Home</li>
+                    <li><div class="link-icon"><i class="fa fa-info"></i></div>About Us</li>
+                    <li><div class="link-icon"><i class="fa fa-lock"></i></div>Privacy Policy</li>
+                    <li><div class="link-icon"><i class="fa fa-book"></i></div>Terms &amp; Condition</li>
+                    <li><div class="link-icon"><i class="fa fa-warning"></i></div>Disclaimer</li>
+                </ul>
+            </div>
+            <div class="col-md-3 hidden-sm hidden-xs categories-links clearfix">
+               <header>Categories</header>
+                <ul class="links">
+                    <li>Lorem</li>
+                    <li>Ipsum</li>
+                    <li>Dolor</li>
+                    <li>Sit</li>
+                    <li>Amet</li>
+                    <li>Ipsum</li>
+                    <li>Dolor</li>
+                </ul>
+                <ul class="links links-right">
+                    <li>Slapstick</li>
+                    <li>Lorem</li>
+                    <li>Ipsum</li>
+                    <li>Dolor</li>
+                    <li>Sit</li>
+                    <li>Amet</li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-5 col-xs-8 col-md-offset-0 col-sm-offset-0 col-xs-offset-2 form">
+                <header>Contact Us</header>
+                <form method="post">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Message" class="message"></textarea>
+                    <input type="submit" value="Send" id="send-button">
+                </form>
+            </div>
+            <div class="col-md-2 col-sm-3 col-md-offset-0 col-sm-offset-0 col-xs-offset-4 col-xs-4 social-media">
+                <div href="#" id="facebook-login">
+                   <i class="fa fa-facebook-official" area hidden="true"></i>
+                   <span>Facebook Login</span>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="footer-black">Copyright @ 2017 E-Cell IIT Delhi</div>
+    </section>
+  
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script  src="js/login.js"></script>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js">
+</body>
+</html>
