@@ -208,13 +208,16 @@ app.use(flash()); // use connect-flash for flash messages stored in session
             obj = {
                 body: req.body
             }
-
+            console.log(obj);
             passport.authenticate('local-login',function(err ,user,info){
             if (err)
                     return next(err);
                 // if no user is found, return the message
                 if (!user)
+                {
+                    console.log("no user");
                     return res.redirect('/login');//done(null, false, req.flash('loginMessage', 'No user found.'));
+                }
                 // all is well, return user
                 console.log(user);
                 req.logIn(user, function(err) {
@@ -256,6 +259,12 @@ app.use(flash()); // use connect-flash for flash messages stored in session
             })(req, res, next);                
 
         });
+
+        app.post('/',function(req,res,next)
+        {
+
+        });
+
 app.post('/companyPost',function(req,res,next){
     var today = new Date();
     var form = {
