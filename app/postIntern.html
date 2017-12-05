@@ -190,18 +190,18 @@
         </div>
                         </div>
                     </div>
-                    <div class="section" id="responsibility_section">
-    <h5>Intern's Responsibilities</h5>
+                    <div class="section" id="description_section">
+    <h5>Internship Description</h5>
     <div class="form-group">
         <div id="jd_container_inner">
-            <label id="intern_responsibilities_description" class="control-label">Write a detailed yet crisp description of intern's responsibilities and convey the excitement of the role *:</label>
+            <label id="intern_description" class="control-label">Write a detailed yet crisp description of intern's responsibilities and convey the excitement of the role *:</label>
             <textarea class="form-control" id="description" name="description" resize="false"></textarea>
         </div>
     </div>
 </div>
-                    <div class="section" id="stipend_perks_section">
+                    <div class="section clearfix" id="stipend_perks_section">
     <h5 id="stipend_section_heading">Stipend &amp; Perks</h5>
-    <div class="form-group internship_specific_info">
+    <div class="col-md-6 col-sm-6 col-xs-12 form-group internship_specific_info clearfix">
                 <label for="stipend_type" class="control-label">Stipend*: </label>
         <div id="stipend_type_options_container">
             <label>
@@ -213,13 +213,11 @@
                 Unpaid
             </label>
         </div>
-        <div id="stipend_type_message_container">
-        </div>
-        <div class="" id="stipendvalue" style="display: block;">
-            <div class="stipendvalue_component">
+        <div class="" id="stipendvalue">
+            <div class="col-md-6 col-xs-6  col-sm-6  stipendvalue_component">
                 <input id="salary" class="small-text-box" name="salary" value="" type="text" maxlength="8" placeholder="Ex:5000">
             </div>
-            <div class="stipendvalue_component">
+            <div class="col-md-4 col-xs-4  col-sm-4  stipendvalue_component">
                 <select id="salary_scale" name="salary_scale" validators="salary::salary">
                     <option value="perweek">/ Week</option>
                     <option value="permonth" selected="">/ Month</option>
@@ -229,8 +227,8 @@
         </div>
     </div>
 
-    <div class="form-group">
-        <label> Perks </label>
+    <div class="col-md-6 col-sm-6 col-xs-12  form-group">
+        <label class="control-label"> Perks </label>
         <div class="perks_options_container">
             <div class="perks_options">
                 <label>
@@ -283,9 +281,9 @@
                     <div class="section" id="who_can_apply_section">
                         <h5>Who can apply</h5>
                         <div class="form-group">
-        <label for="skills" class="control-label">Skill(s) that you are looking for: <span class="label_hint">(Type one or more skills) (Recommended)</span></label>
-        <input type="text" value="" class="form-control ui-autocomplete-input" id="skills" name="skill" placeholder="Ex: PHP, Adobe Photoshop, MS-Office, English Proficiency etc" validators="required" autocomplete="off">
-    </div>
+                            <label for="skills" class="control-label">Skill(s) that you are looking for: <span class="label_hint">(Type one or more skills) (Recommended)</span></label>
+                            <input type="text" value="" class="form-control ui-autocomplete-input" id="skills" name="skill" placeholder="Ex: PHP, Adobe Photoshop, MS-Office, English Proficiency etc" validators="required" autocomplete="off">
+                        </div>
                     </div>
                     <div id="button_container_section" style="clear:both;">
                         <input class="btn btn-primary pull-right" style="font-size: 16px;" id="publish" value="Post Internship" type="submit">

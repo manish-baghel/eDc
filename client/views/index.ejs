@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%include partials/_header.ejs%>
+</head>
+<body>
+<!-- NavBar  -->
+<%include partials/_navbar.ejs%>
+<!--Banner Container-->
+<%include home_partials/banner.ejs%>
+<!-- About Us Content   -->
+<%include home_partials/about_us.ejs%>
+<!-- Counter -->
+<%include home_partials/counter.ejs%>
+<!-- Programs   -->
+<%include home_partials/programs.ejs%>
+
+<!-- Footer   -->
+<%include partials/_footer_content.ejs%>
+   
+<%include partials/_footer_script.ejs%>
+<script>
+    $('a[href*="#"]:not([href="#"])').on('click', function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    },600);
+                    return false;
+                }
+            }
+        });
+</script>
+</body>
+</html>
