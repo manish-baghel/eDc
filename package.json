@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app"
   },
-  "author": "\"Manish\"\\",
+  "author": "\"Manish && Sunil Kumar\"\\",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.11",
