@@ -616,7 +616,7 @@ ul.dropdown-menu {
     float: left; }
 
 #login-signup {
-  height: 100vh;
+  height: 100%;
   margin-left: auto;
   margin-right: auto; }
   #login-signup a {

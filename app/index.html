@@ -131,75 +131,90 @@
     </section>
 <!-- Programs   -->
     <section id="programs">
-        <div class="container">
-        <header id="program-header">Our Programs</header>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-      
-        <div class="item active">
-          <img src="http://placehold.it/760x400/cccccc/ffffff">
-           <div class="carousel-caption">
-            <h4><a href="#">Startup 101</a></h4>
-            <p>Aimed at inspiring people who are new to Entrepreneurship to take it up as a career choice, this program intends to foster the spirit of Entrepreneurship among the student community through memoirs of successful businessmen, panel discussions and case study challenges.</p>
-          </div>
-        </div><!-- End Item -->
- 
-         <div class="item">
-          <img src="http://placehold.it/760x400/999999/cccccc">
-           <div class="carousel-caption">
-            <h4><a href="#">Startup 201</a></h4>
-            <p>This program is directed towards people who are already into the Startup Bandwagon and intend to start a business of their own. Through a series of 8 lectures, this initiative wishes to enhance the knowledge of these wantrepreneurs. Loosely based on ‘How to start a Startup Course’ by Y Combinator, this program is being held once a week in association with Ivy Cap Ventures.</p>
-          </div>
-        </div><!-- End Item -->
+        <div class="container-fluid">
         
-        <div class="item">
-          <img src="http://placehold.it/760x400/999999/cccccc">
-           <div class="carousel-caption">
-            <h4><a href="#">Founder Diaries</a></h4>
-            <p>This year, eDC is launching ‘Founder Diaries’, a one of its kind initiatives where seasoned founders who are also alumni of IIT Delhi share their Startup and Product journey with students and early stage Entrepreneurs thus inspiring them to do something big in their own lives.</p>
-          </div>
-        </div><!-- End Item -->
-        
-        <div class="item">
-          <img src="http://placehold.it/760x400/dddddd/333333">
-           <div class="carousel-caption">
-            <h4><a href="#">Startup 301</a></h4>
-            <p>A mentorship program planned for people having Startups, we intend to help them in their endeavours by bringing together Alumni, Venture Capitalists and Domain Experts on board thereby facilitating their performance.</p>
-          </div>
-        </div><!-- End Item -->
-
-        <div class="item">
-          <img src="http://placehold.it/760x400/dddddd/333333">
-           <div class="carousel-caption">
-            <h4><a href="#">Innovation Grand Challenge</a></h4>
-            <p>A Business Challenge for students, we aim to foster their technical skills and capabilities through this competition.</p>
-          </div>
-        </div><!-- End Item -->
-                
-      </div><!-- End Carousel Inner -->
-
-
-    <ul class="list-group col-sm-4">
-      <li data-target="#myCarousel" data-slide-to="0" class="list-group-item active"><h4>Startup 101</h4></li>
-      <li data-target="#myCarousel" data-slide-to="1" class="list-group-item"><h4>Startup 201</h4></li>
-      <li data-target="#myCarousel" data-slide-to="2" class="list-group-item"><h4>Founder Diaries</h4></li>
-      <li data-target="#myCarousel" data-slide-to="3" class="list-group-item"><h4>Startup 301</h4></li>
-      <li data-target="#myCarousel" data-slide-to="4" class="list-group-item"><h4>Innovation Grand Challenge</h4></li>
-    </ul>
-
-      <!-- Controls -->
-      <div class="carousel-controls">
-          <a class="left carousel-control" href="" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-          <a class="right carousel-control" href="" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
+<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+ <header id="program-header">Our Programs</header>
+  <ol class="carousel-indicators">
+      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1"></li>
+      <li data-target="#carousel" data-slide-to="2"></li>
+      <li data-target="#carousel" data-slide-to="3"></li>
+  </ol>
+  
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="slide-content">
+        <video poster="http://192.241.175.50/videos/london.jpg" webkit-playsinline id="bgvid" loop>
+          <source src="http://192.241.175.50/videos/london.webm" type="video/webm">
+          <source src="http://192.241.175.50/videos/london.mp4" type="video/mp4">
+        </video>
+        <div class="slide-overlay door">
+          <div class='title'>Startup 101</div>
+          <div class="description">Aimed at inspiring people who are new to Entrepreneurship to take it up as a career choice, this program intends to foster the spirit of Entrepreneurship among the student community through memoirs of successful businessmen, panel discussions and case study challenges.</div>
+        </div>
       </div>
-
-    </div><!-- End Carousel -->
+    </div>
+    <div class="item">
+      <div class="slide-content">
+        <video poster="http://192.241.175.50/videos/boston.jpg" webkit-playsinline id="bgvid" loop>
+          <source src="http://192.241.175.50/videos/boston.webm" type="video/webm">
+          <source src="http://192.241.175.50/videos/boston.mp4" type="video/mp4">
+        </video>
+        <div class="slide-overlay door">
+          <div class='title'> Startup 201 </div>
+          <div class="description">This program is directed towards people who are already into the Startup Bandwagon and intend to start a business of their own. Through a series of 8 lectures, this initiative wishes to enhance the knowledge of these wantrepreneurs. Loosely based on ‘How to start a Startup Course’ by Y Combinator, this program is being held once a week in association with Ivy Cap Ventures.</div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="slide-content">
+        <video poster="http://192.241.175.50/videos/split.jpg" webkit-playsinline id="bgvid" loop>
+          <source src="http://192.241.175.50/videos/split.webm" type="video/webm">
+          <source src="http://192.241.175.50/videos/split.mp4" type="video/mp4">
+        </video>
+        <div class="slide-overlay door">
+          <div class='title'>Founder Diaries</div>
+          <div class="description">This year, eDC is launching ‘Founder Diaries’, a one of its kind initiatives where seasoned founders who are also alumni of IIT Delhi share their Startup and Product journey with students and early stage Entrepreneurs thus inspiring them to do something big in their own lives.</div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="slide-content">
+        <video poster="http://192.241.175.50/videos/samo.jpg" webkit-playsinline id="bgvid" loop>
+          <source src="http://192.241.175.50/videos/samo.webm" type="video/webm">
+          <source src="http://192.241.175.50/videos/samo.mp4" type="video/mp4">
+        </video>
+        <div class="slide-overlay door">
+          <div class='title'>Startup 301</div>
+          <div class="description">A mentorship program planned for people having Startups, we intend to help them in their endeavours by bringing together Alumni, Venture Capitalists and Domain Experts on board thereby facilitating their performance.</div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="slide-content">
+        <video poster="http://192.241.175.50/videos/samo.jpg" webkit-playsinline id="bgvid" loop>
+          <source src="http://192.241.175.50/videos/samo.webm" type="video/webm">
+          <source src="http://192.241.175.50/videos/samo.mp4" type="video/mp4">
+        </video>
+        <div class="slide-overlay door">
+          <div class='title'>Innovation Grand Challenge</div>
+          <div class="description">A Business Challenge for students, we aim to foster their technical skills and capabilities through this competition.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <a class="carousel-control left" href="#carousel" data-slide="prev">
+   <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  
+  <a class="carousel-control right" href="#carousel" data-slide="next">
+   <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+  
+</div>
     </div>
         
     </section>
