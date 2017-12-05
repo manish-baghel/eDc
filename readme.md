@@ -1,4 +1,5 @@
-BASIC WEB APPLICATION eDC using GULP Frontend Stuff oonly
+eDc APPLICATION  using NodeJS
+GULP-Frontend Stuff only
 
 Don't forget to run $ npm install
 If things don't workout then follow below code:-
