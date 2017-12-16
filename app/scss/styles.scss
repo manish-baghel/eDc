@@ -1897,8 +1897,7 @@ textarea {
 }
 .carousel-fade .carousel-control {
   z-index: 2;
-  display: flex;
-  justify-content: center;
+  display: block;
   align-items: center;
 }
 .carousel-fade .carousel-control .glyphicon {
@@ -1915,8 +1914,7 @@ textarea {
 }
 .slide-content {
   color: #fff;
-  display: flex;
-  flex-direction: column;
+  display: block;
   justify-content: center;
   align-items: center;
   min-height: 100%;
