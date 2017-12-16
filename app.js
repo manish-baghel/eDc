@@ -82,65 +82,6 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 app.use('/', mainRoutes);
 // normal routes ===============================================================
 
-    // show the home page (will also have our login links)
-    // app.get('/', function(req, res) {
-    //     res.render('index.ejs');
-    // });
-
-    // app.get('/admin',/*requireRole('admin'),*/function(req,res){
-    // res.render('other/admin.ejs');
-    // });
-    // app.get('/member',requireRole('member'),function(req,res){
-    //     res.render('user/intern_listing.ejs');
-    // });
-    // app.get('/mail',function(req,res){
-    //     res.render('other/mail.ejs');
-    // });
-    // app.get('/company',requireRole('company'),function(req,res){
-    //     res.render('company/company.ejs');
-    // })
-    // app.get('/company/postintern',function(req,res){
-    //     res.render('company/postIntern.ejs');
-    // })
-
-    app.post('/mem',function(req,res){
-            connection.query('SELECT * FROM form ',function(err,results,fields){
-            console.log('hey there');
-            console.log('results');
-            var result;
-            if(err) throw err;
-            result = parseIt(results);
-
-            console.log(results);
-            return res.json(result);
-    });
-    });
-
-    app.post('/admin1',function(req,res){
-        console.log(req.body);
-        connection.query('UPDATE form SET approved="1" where form_id = ?',req.body.form_id,function(err,results,fields){
-            console.log('hey there');
-            console.log('results');
-            var result;
-            if(err) throw err;
-            result = parseIt(results);
-
-            console.log(results);
-            return res.json(result);
-    });
-    });
-    app.post('/admin',function(req,res){
-            connection.query('SELECT * FROM form where approved = "0"',function(err,results,fields){
-            console.log('hey there');
-            console.log('results');
-            var result;
-            if(err) throw err;
-            result = parseIt(results);
-
-            console.log(results);
-            return res.json(result);
-    });
-    });
 
     function parseIt(rawData){
     rawData = JSON.stringify(rawData);
@@ -156,11 +97,7 @@ app.use('/', mainRoutes);
     });
 
 
-    // LOGOUT ==============================
-    app.get('/logout', function(req, res) {
-        req.logout();
-        res.redirect('/');
-    });
+
 /*
     app.post('/',function(req,res,next){
         console.log(req.body);
@@ -259,45 +196,6 @@ app.use('/', mainRoutes);
             })(req, res, next);                
 
         });
-
-        app.post('/',function(req,res,next)
-        {
-
-        });
-
-app.post('/companyPost',function(req,res,next){
-    var today = new Date();
-    var form = {
-        profile: req.body.profile_primary,
-        headline: req.body.job_headline,
-        location:req.body.location,
-        discription: req.body.discription,
-        jobType:req.body.type,
-        Duration:req.body.duration,
-        start: req.body.start_date,
-        Stipend: req.body.stipend,
-        perks: req.body.perks,
-        skills: req.body.skill,
-        posted_on:today
-    }
-   // console.log('INSERT INTO form SET '+ form.profile);
-    var query = connection.query('INSERT INTO form SET ?',form,function(err,results,fields){
-        if(err){
-            res.json({
-                status:false,
-                message:'failed form insertion'
-            })
-        }else{
-            res.json({
-                status:true,
-                data:results,
-                message:'form iserted'
-            })
-        }
-    });
- //   console.log(query.sql);
-});
-
 
 // =============================================================================
 // AUTHORIZE (ALREADY LOGGED IN / CONNECTING OTHER SOCIAL ACCOUNT) =============

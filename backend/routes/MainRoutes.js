@@ -17,6 +17,8 @@ router.route('/admin').get(mainController.admin);
 router.route('/member').get(mainController.member);
 router.route('/company').get(mainController.company);
 router.route('/company/postintern').get(mainController.companyinternform);
+router.route('/logout').get(mainController.logout);
+
 //==============================================================
 //================  SPECIAL GET REQUEST ========================
 //================ NOT TO BE USED =============================
@@ -27,5 +29,9 @@ router.route('/mail').get(mainController.mail);
 //==============================================================
 //================== POST REQUEST ROUTER =======================
 //==============================================================
+router.route('/companyPost').post(mainController.companyPost);
+router.route('/mem').post(mainController.mem);
+router.route('/admin').post(mainController.adminpost);
+router.route('/admin1').post(mainController.admin1post);
 
 module.exports = router;
