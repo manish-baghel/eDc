@@ -90,18 +90,18 @@ app.use('/', mainRoutes);
     // app.get('/admin',/*requireRole('admin'),*/function(req,res){
     // res.render('other/admin.ejs');
     // });
-    app.get('/member',requireRole('member'),function(req,res){
-        res.render('user/intern_listing.ejs');
-    });
-    app.get('/mail',function(req,res){
-        res.render('other/mail.ejs');
-    });
-    app.get('/company',requireRole('company'),function(req,res){
-        res.render('company/company.ejs');
-    })
-    app.get('/company/postintern',function(req,res){
-        res.render('company/postIntern.ejs');
-    })
+    // app.get('/member',requireRole('member'),function(req,res){
+    //     res.render('user/intern_listing.ejs');
+    // });
+    // app.get('/mail',function(req,res){
+    //     res.render('other/mail.ejs');
+    // });
+    // app.get('/company',requireRole('company'),function(req,res){
+    //     res.render('company/company.ejs');
+    // })
+    // app.get('/company/postintern',function(req,res){
+    //     res.render('company/postIntern.ejs');
+    // })
 
     app.post('/mem',function(req,res){
             connection.query('SELECT * FROM form ',function(err,results,fields){

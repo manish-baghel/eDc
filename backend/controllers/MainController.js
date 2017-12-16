@@ -8,7 +8,9 @@ module.exports = {
     login:login,
     admin:admin,
     member:member,
-    company:company
+    company:company,
+    companyinternform:companyinternform,
+    mail:mail
 }
 
 //==========================================================
@@ -32,10 +34,21 @@ function company(req,res,next){
     res.render('company/company.ejs');
 }
 function member(req,res,next){
-    requireRole(req,res,next,'member');
-    res.render('user/intern_listings.ejs');
+    // requireRole(req,res,next,'member');
+    res.render('user/intern_listing.ejs');
+}
+function companyinternform(req,res,next){
+    // requireRole(req,res,next,'company');
+    res.render('company/postIntern.ejs')
 }
 
+
+//==========================================================
+//============ SPECIAL GET REQUEST =========================
+//==========================================================
+function mail(req,res){
+    res.render('other/mail.ejs');
+}
 
 //===========================================================
 //========= checks role of user =============================
