@@ -90,13 +90,13 @@ app.use(flash()); // use connect-flash for flash messages stored in session
     app.get('/admin',/*requireRole('admin'),*/function(req,res){
     res.render('other/admin.ejs');
     });
-    app.get('/member',/*requireRole('member'),*/function(req,res){
+    app.get('/member',requireRole('member'),function(req,res){
         res.render('user/intern_listing.ejs');
     });
     app.get('/mail',function(req,res){
         res.render('other/mail.ejs');
     });
-    app.get('/company',function(req,res){
+    app.get('/company',requireRole('company'),function(req,res){
         res.render('company/company.ejs');
     })
     app.get('/company/postintern',function(req,res){
@@ -349,13 +349,14 @@ function requireRole (role) {
         console.log(req.user);
         if(typeof req.user != "undefined")
         { 
+           // console.log(req.user);
             if ( req.user.local.role === role) {
               //res.send(403);
                 //res.redirect('/login');
                 next();
             } else {
                 //next();
-                res.send(403);
+                res.redirect('/'+req.user.local.role);
             }
         }else
         {
