@@ -5,10 +5,17 @@ var database = require('../Models/db_model');
 
 module.exports = {
     home:home,
-    login:login
+    login:login,
+    admin:admin,
+    member:member,
+    company:company
 }
+
+//==========================================================
+//========== get request handling==========================
+//==========================================================
 function home(req,res){
-    res.render('index');
+    res.render('index.ejs');
 }
 function login(req,res){
     res.render(
@@ -16,6 +23,49 @@ function login(req,res){
         {message: req.flash('loginMessage')}
     );
 }
+function admin(req,res,next){
+    // requireRole(req,res,next,'admin');
+    res.render('other/admin.ejs');
+}
+function company(req,res,next){
+    // requireRole(req,res,next,'company');
+    res.render('company/company.ejs');
+}
+function member(req,res,next){
+    requireRole(req,res,next,'member');
+    res.render('user/intern_listings.ejs');
+}
+
+
+//===========================================================
+//========= checks role of user =============================
+//===========================================================
+function requireRole(req,res,next,role) {
+    console.log(req.user+ ":  this is user");
+    if(typeof req.user != "undefined")
+    { 
+       // console.log(req.user);
+        if ( req.user.local.role === role) {
+            next();
+        } else {
+            res.redirect('/'+req.user.local.role);
+        }
+    }else
+    {
+        res.redirect('/login');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 function ambulancePost(req, res){
     var data = req.body;

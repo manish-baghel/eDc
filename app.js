@@ -79,17 +79,17 @@ app.use(flash()); // use connect-flash for flash messages stored in session
         });
     }
 
-
+app.use('/', mainRoutes);
 // normal routes ===============================================================
 
     // show the home page (will also have our login links)
-    app.get('/', function(req, res) {
-        res.render('index.ejs');
-    });
+    // app.get('/', function(req, res) {
+    //     res.render('index.ejs');
+    // });
 
-    app.get('/admin',/*requireRole('admin'),*/function(req,res){
-    res.render('other/admin.ejs');
-    });
+    // app.get('/admin',/*requireRole('admin'),*/function(req,res){
+    // res.render('other/admin.ejs');
+    // });
     app.get('/member',requireRole('member'),function(req,res){
         res.render('user/intern_listing.ejs');
     });
@@ -372,7 +372,7 @@ function requireRole (role) {
 
 
 
-app.use('/', mainRoutes);
+
 app.listen(app.get('port'), function () {
     console.log('Application running in port '+ app.get('port'));
 });
