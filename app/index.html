@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/superslides.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="js/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.hammer.min.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <!-- NavBar  -->
@@ -32,7 +35,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/#banner">Home</a></li>
+            <li><a href="/#slides">Home</a></li>
             <li><a href="/#about">About Us</a></li>
             <li><a href="/#programs">Our Programs</a></li>
             <li><a href="/#team">Team</a></li>
@@ -42,57 +45,56 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-<!--Banner Container-->
-    <section id="banner">
-        <div class="container">
-            <div id="banner-image">
-                <figure>
-                    <div class='banner-div' style="background-image:url(images/carousel-1.jpg);">
-                        <div class="banner-text">
-                            <div class="hero-text">Lorem Ipsum</div>
-                            <div class="sub-text">
-                                consectetur adipisicing elit Quas consequuntur assumenda et saepe dignissimos non officia tempora
-                            </div>
-                        </div>
-                    </div>
-                    <div class='banner-div' style="background-image:url(images/carousel-2.jpg);">
-                        <div class="banner-text">
-                            <div class="hero-text">Lorem Ipsum</div>
-                            <div class="sub-text">
-                                consectetur adipisicing elit consectetur quam harum amet numquam nesciunt odit molestiae aperiam
-                            </div>
-                        </div>
-                    </div>
-                    <div class='banner-div' style="background-image:url(images/carousel-3.jpg);">
-                    <div class="banner-text">
-                            <div class="hero-text">Lorem Ipsum</div>
-                            <div class="sub-text">
-                                consectetur adipisicing elit cupiditate ratione voluptatem asperiores. Accusantium
-                            </div>
-                        </div>
-                    </div>
-                    <div class='banner-div' style="background-image:url(images/carousel-4.jpg);">
-                        <div class="banner-text">
-                            <div class="hero-text">Lorem Ipsum</div>
-                            <div class="sub-text">
-                                consectetur adipisicing elit Pariatur, ea. Quas consequuntur assumenda et saepe dignissimos non officia
-                            </div>
-                        </div>
-                    </div>
-                    <div class='banner-div' style="background-image:url(images/carousel-5.jpg);">
-                    <div class="banner-text">
-                            <div class="hero-text">Lorem Ipsum</div>
-                            <div class="sub-text">
-                                consectetur adipisicing elit molestiae aperiam, at, cupiditate ratione voluptatem asperiores
-                            </div>
-                        </div>
-                    </div>
-                </figure>
-                <div href="#about" id="down-button" class="animated infinite bounce"></div>
-            </div>
-        </div>
-    </section>
-<!-- Quotes   -->
+<!-- Primary banner   -->
+<div id="slides">
+  <ul class="slides-container">
+    <li>
+      <img src="images/carousel-1.jpg" alt="">
+      <div class="banner-text-container" id="typed-strings">
+          <h1>It's responsive.</h1>
+          <div class="contrast">
+            <p>
+              Images are smartly centered in the viewport. Use your own media queries to control the layout of your content.
+            </p>
+          </div>
+      </div>
+      <span id="typed"></span>
+    </li>
+    <li>
+      <img src="images/carousel-2.jpg" alt="">
+      <div class="banner-text-container">
+          <h1>It's responsive.</h1>
+          <div class="contrast">
+            <p>
+              Images are smartly centered in the viewport. Use your own media queries to control the layout of your content.
+            </p>
+          </div>
+      </div>
+    </li>
+    <li>
+      <img src="images/carousel-3.jpg" alt="">
+      <div class="banner-text-container">
+          <h1>It's responsive.</h1>
+          <div class="contrast">
+            <p>
+              Images are smartly centered in the viewport. Use your own media queries to control the layout of your content.
+            </p>
+          </div>
+      </div>
+    </li>
+  </ul>
+  <nav class="slides-navigation">
+      <a href="#" class="next">
+        <i class="icon-chevron-right"></i>
+      </a>
+      <a href="#" class="prev">
+        <i class="icon-chevron-left"></i>
+      </a>
+  </nav>
+</div>
+
+
+
 <!--
     <section id="quotes">
         <q>The true entrepreneur is a doer, not a dreamer</q>
@@ -116,110 +118,77 @@
             </div>
         </div>
     </section>
-<!-- Counter -->
-    <section id="counter" class="parallax">
-        <div class="container">
-            <div class="row">
-                <div class="counter-value col-xs-4 col-md-4 col-sm-4" data-count="740">450
-                </div>
-                <div class="counter-value col-xs-4 col-md-4 col-sm-4" data-count="370">120
-                </div>
-                <div class="counter-value col-xs-4 col-md-4 col-sm-4" data-count="545">110
-                </div>
-            </div>
-        </div>
-    </section>
+
 <!-- Programs   -->
     <section id="programs">
         <div class="container-fluid">
-        
-<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
- <header id="program-header">Our Programs</header>
-  <ol class="carousel-indicators">
-      <li data-target="#carousel" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel" data-slide-to="1"></li>
-      <li data-target="#carousel" data-slide-to="2"></li>
-      <li data-target="#carousel" data-slide-to="3"></li>
-  </ol>
+          <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+            <!-- <header id="program-header">Our Programs</header> -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+                <li data-target="#carousel" data-slide-to="3"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="slide-content">
+                  <img src="images/carousel-2.jpg" alt="">
+                  <div class="slide-overlay door">
+                    <div class='title'>Startup 101</div>
+                    <div class="description">Aimed at inspiring people who are new to Entrepreneurship to take it up as a career choice, this program intends to foster the spirit of Entrepreneurship among the student community through memoirs of successful businessmen, panel discussions and case study challenges.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="slide-content">
+                  <img src="images/carousel-1.jpg" alt="">
+                  <div class="slide-overlay door">
+                    <div class='title'> Startup 201 </div>
+                    <div class="description">This program is directed towards people who are already into the Startup Bandwagon and intend to start a business of their own. Through a series of 8 lectures, this initiative wishes to enhance the knowledge of these wantrepreneurs. Loosely based on ‘How to start a Startup Course’ by Y Combinator, this program is being held once a week in association with Ivy Cap Ventures.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="slide-content">
+                  <img src="images/carousel-2.jpg" alt="">
+                  <div class="slide-overlay door">
+                    <div class='title'>Founder Diaries</div>
+                    <div class="description">This year, eDC is launching ‘Founder Diaries’, a one of its kind initiatives where seasoned founders who are also alumni of IIT Delhi share their Startup and Product journey with students and early stage Entrepreneurs thus inspiring them to do something big in their own lives.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="slide-content">
+                  <img src="images/carousel-3.jpg" alt="">
+                  <div class="slide-overlay door">
+                    <div class='title'>Startup 301</div>
+                    <div class="description">A mentorship program planned for people having Startups, we intend to help them in their endeavours by bringing together Alumni, Venture Capitalists and Domain Experts on board thereby facilitating their performance.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="slide-content">
+                  <img src="images/carousel-1.jpg" alt="">
+                  <div class="slide-overlay door">
+                    <div class='title'>Innovation Grand Challenge</div>
+                    <div class="description">A Business Challenge for students, we aim to foster their technical skills and capabilities through this competition.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
   
-  <!-- Carousel items -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <div class="slide-content">
-        <video poster="http://192.241.175.50/videos/london.jpg" webkit-playsinline id="bgvid" loop>
-          <source src="http://192.241.175.50/videos/london.webm" type="video/webm">
-          <source src="http://192.241.175.50/videos/london.mp4" type="video/mp4">
-        </video>
-        <div class="slide-overlay door">
-          <div class='title'>Startup 101</div>
-          <div class="description">Aimed at inspiring people who are new to Entrepreneurship to take it up as a career choice, this program intends to foster the spirit of Entrepreneurship among the student community through memoirs of successful businessmen, panel discussions and case study challenges.</div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="slide-content">
-        <video poster="http://192.241.175.50/videos/boston.jpg" webkit-playsinline id="bgvid" loop>
-          <source src="http://192.241.175.50/videos/boston.webm" type="video/webm">
-          <source src="http://192.241.175.50/videos/boston.mp4" type="video/mp4">
-        </video>
-        <div class="slide-overlay door">
-          <div class='title'> Startup 201 </div>
-          <div class="description">This program is directed towards people who are already into the Startup Bandwagon and intend to start a business of their own. Through a series of 8 lectures, this initiative wishes to enhance the knowledge of these wantrepreneurs. Loosely based on ‘How to start a Startup Course’ by Y Combinator, this program is being held once a week in association with Ivy Cap Ventures.</div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="slide-content">
-        <video poster="http://192.241.175.50/videos/split.jpg" webkit-playsinline id="bgvid" loop>
-          <source src="http://192.241.175.50/videos/split.webm" type="video/webm">
-          <source src="http://192.241.175.50/videos/split.mp4" type="video/mp4">
-        </video>
-        <div class="slide-overlay door">
-          <div class='title'>Founder Diaries</div>
-          <div class="description">This year, eDC is launching ‘Founder Diaries’, a one of its kind initiatives where seasoned founders who are also alumni of IIT Delhi share their Startup and Product journey with students and early stage Entrepreneurs thus inspiring them to do something big in their own lives.</div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="slide-content">
-        <video poster="http://192.241.175.50/videos/samo.jpg" webkit-playsinline id="bgvid" loop>
-          <source src="http://192.241.175.50/videos/samo.webm" type="video/webm">
-          <source src="http://192.241.175.50/videos/samo.mp4" type="video/mp4">
-        </video>
-        <div class="slide-overlay door">
-          <div class='title'>Startup 301</div>
-          <div class="description">A mentorship program planned for people having Startups, we intend to help them in their endeavours by bringing together Alumni, Venture Capitalists and Domain Experts on board thereby facilitating their performance.</div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="slide-content">
-        <video poster="http://192.241.175.50/videos/samo.jpg" webkit-playsinline id="bgvid" loop>
-          <source src="http://192.241.175.50/videos/samo.webm" type="video/webm">
-          <source src="http://192.241.175.50/videos/samo.mp4" type="video/mp4">
-        </video>
-        <div class="slide-overlay door">
-          <div class='title'>Innovation Grand Challenge</div>
-          <div class="description">A Business Challenge for students, we aim to foster their technical skills and capabilities through this competition.</div>
-        </div>
-      </div>
-    </div>
-  </div>
+            <a class="carousel-control left" href="#carousel" role="button" data-slide="prev">
+            <i class="icon-chevron-left glyphicon glyphicon-chevron-left"></i>
+            </a>
   
-  <a class="carousel-control left" href="#carousel" data-slide="prev">
-   <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  
-  <a class="carousel-control right" href="#carousel" data-slide="next">
-   <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-  
-</div>
-    </div>
-        
+            <a class="carousel-control right" href="#carousel" role="button" data-slide="next">
+            <i class="icon-chevron-right glyphicon glyphicon-chevron-right"></i>
+            </a>
+        </div>
+      </div>  
     </section>
-    
-    
     
     <section>
     
@@ -236,7 +205,7 @@
           <article class="teamy teamy_style1 teamy_mask-circle teamy_zoom-photo">
             <div class="teamy__layout">
               <div class="teamy__preview">
-                <img src="" alt="The demo photo">
+                <img src="https://stas-melnikov.ru/cliparts/girl4_424x640.jpg" class="teamy__avatar" alt="The demo photo">
               </div>
               <div class="teamy__back">
                 <div class="teamy__back-inner">
@@ -263,7 +232,7 @@
           <article class="teamy teamy_style1 teamy_mask-circle teamy_zoom-photo">
             <div class="teamy__layout">
               <div class="teamy__preview">
-                <img src="" alt="The demo photo">
+                <img src="https://stas-melnikov.ru/cliparts/girl5_424x640.jpg" class="teamy__avatar" alt="The demo photo">
               </div>
               <div class="teamy__back">
                 <div class="teamy__back-inner">
@@ -290,7 +259,7 @@
           <article class="teamy teamy_style1 teamy_mask-circle teamy_zoom-photo">
             <div class="teamy__layout">
               <div class="teamy__preview">
-                <img src="" alt="The demo photo">
+                <img src="https://stas-melnikov.ru/cliparts/girl3_424x640.jpg" class="teamy__avatar" alt="The demo photo">
               </div>
               <div class="teamy__back">
                 <div class="teamy__back-inner">
@@ -319,6 +288,20 @@
       </div>
     </section>
     
+
+    <!-- Counter -->
+    <section id="counter" class="parallax">
+        <div class="container">
+            <div class="row">
+                <div class="counter-value col-xs-4 col-md-4 col-sm-4" data-count="740">450
+                </div>
+                <div class="counter-value col-xs-4 col-md-4 col-sm-4" data-count="370">120
+                </div>
+                <div class="counter-value col-xs-4 col-md-4 col-sm-4" data-count="545">110
+                </div>
+            </div>
+        </div>
+    </section>
     
 <!--
     
@@ -722,7 +705,7 @@
    
 
 
-<script src="js/jquery.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/script.js"></script>
@@ -803,7 +786,7 @@
     });
 </script>
 <script>
-$('a[href*="#"]:not([href="#"])').click(function() {
+$('a[href*="#"]:not([href="#"]):not(a[href="#carousel"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
         || location.hostname == this.hostname) {
 
@@ -812,7 +795,7 @@ $('a[href*="#"]:not([href="#"])').click(function() {
            if (target.length) {
              $('html,body').animate({
                  scrollTop: target.offset().top
-            }, 1000);
+            }, 600);
             return false;
         }
     }

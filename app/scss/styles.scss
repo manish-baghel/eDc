@@ -41,38 +41,38 @@ label{
 }
 
 //Animations
-@keyframes slide {
-    0% {
-        left: 0%;
-    }
-    17% {
-        left: 0%;
-    }
-    20% {
-        left: -100%;
-    }
-    37% {
-        left: -100%;
-    }
-    40% {
-        left: -200%;
-    }
-    57% {
-        left: -200%;
-    }
-    60% {
-        left: -300%;
-    }
-    77% {
-        left: -300%;
-    }
-    80% {
-        left: -400%;
-    }
-    100% {
-        left : -400%;
-    }
-}
+// @keyframes slide {
+//     0% {
+//         left: 0%;
+//     }
+//     17% {
+//         left: 0%;
+//     }
+//     20% {
+//         left: -100%;
+//     }
+//     37% {
+//         left: -100%;
+//     }
+//     40% {
+//         left: -200%;
+//     }
+//     57% {
+//         left: -200%;
+//     }
+//     60% {
+//         left: -300%;
+//     }
+//     77% {
+//         left: -300%;
+//     }
+//     80% {
+//         left: -400%;
+//     }
+//     100% {
+//         left : -400%;
+//     }
+// }
 
 
 
@@ -119,8 +119,8 @@ label{
 /* opaque navbar */
 
 .navbar-default.opaque {
-    background-color: #353535!important;
-    transition: background-color 0.8s ease ;
+    background-color: #232323!important;
+    transition: all 0.8s ease ;
     .navbar-toggle{
         .icon-bar{
             background-color: #eee;
@@ -130,8 +130,8 @@ label{
         li{
             a{
                 color: #eee;
-                font-size: 1.3em;
-                font-weight: lighter;
+                font-size: 1.4em;
+                font-weight: 300;
             }
         }
     }
@@ -139,7 +139,7 @@ label{
         a{
             color: #eee;
             font-size: 2.1em;
-            font-weight: lighter;
+            font-weight:300;
         }
         
     }
@@ -414,7 +414,6 @@ ul.dropdown-menu {
     #programs{
     width: 100%;
     background: #efefef;
-    padding: 10px 0 40px 0;
     text-align: center;
     overflow: hidden;
     .container-fluid{
@@ -656,7 +655,6 @@ ul.dropdown-menu {
     #programs{
     width: 100%;
     background: #efefef;
-    padding: 10px 0 40px 0;
     text-align: center;
     overflow: hidden;
     .container-fluid{
@@ -1082,51 +1080,65 @@ textarea {
 
 //Intern page css
 #internships{
-    height: 900px;
-    margin-top: 20px;
+    // height: 900px;
+    margin-top: 60px;
     margin-bottom: 30px;
     .container-fluid{
+        padding:10px;
         background: #fff;
+        box-shadow: 0px 5px 16px -3px #000;
         height: 100%;
         max-width: 1200px;
         header{
             font-size: 24px;
             font-weight: 500;
             padding-bottom: 20px;
-            border-bottom: 1px solid #ddd;
+            border-bottom:1px #353535 solid;
+            box-shadow:0px 4px 24px -4px #fff;
         }
         .row{
-            margin-top: 20px;
-            height: 100%;
-            .filters{
-                height: 80%;
-                padding-right: 20px;
-                border-right: 1px solid #ddd;
-            }
+            margin-top: 0px;
+            margin:0;
+            // height: 100%;
             .listings{
-                overflow: scroll;
-                max-height: 800px;
+                padding:0;
+                // overflow: scroll;
                 .individual-intern{
                     border-bottom: 1px solid #ddd;
                     padding: 10px 0;
                     .container-fluid{
+                        box-shadow:none;
                         header{
-                            border-bottom: 0;
+                            border: 0;
                             padding: 0;
                         }
                         .row{
+                            padding:0;
                             margin-top: 10px;
                             margin-bottom: 10px;
+                            .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
+                                padding:0;
+                            }
                         }
                         .button-row{
                             margin-top: 20px;
                             button{
                                 width: 120px;
-                                border-radius: 0;
+                                padding:10px 0px;
                                 font-size: 16px;
                                 border: 0;
-                                background: #737373;
+                                background: #565656;
                                 color: #eee;
+                                font-weight:300;
+                                border-radius:5px;
+                            }
+                            .view-btn{
+
+                            }
+                            @media screen and (max-width:768px){
+                                .view-btn,button{
+                                    // display:none;
+                                }
                             }
                         }
                     }
@@ -1139,43 +1151,52 @@ textarea {
 
 //Company Dashboard 
 #dashboard{
-    max-height: 900px;
+    // max-height: 900px;
     margin-top: 60px;
     margin-bottom: 30px;
     .container-fluid{
         background: #fff;
         height: 100%;
         padding: 0;
+        box-shadow: 0px 5px 16px -3px #000;
         max-width: 1200px;
         header{
             font-size: 24px;
-            font-weight: 500;
+            font-weight: 300;
+            letter-spacing:1.7px;
             padding: 10px 20px 10px 20px;
             border-bottom: 1px solid #ddd;
-            background: #aaa;
-            color: #fff;
+            background: #353535;
+            color: #eee;
         }
         .row{
-            margin-left: 0;
-            margin-top: 0px;
+            margin:0;
             height: 100%;
             .options{
-                height: 80%;
-                min-height: 600px;
-                background-color: #ccc;
-                padding-right: 20px;
-                padding-top: 20px;
-                border-right: 1px solid #ddd;
+                height: 100%;
+                // min-height: 600px;
+                background-color: transparent;
+                padding:0;
+                // border-right: 1px solid #ddd;
                 .container-fluid{
                     background: transparent;
+                    box-shadow:none;
                     .row{
-                        height: 50px;
-                        border-bottom: 2px solid #ccc;
+                        height: auto;
+                        padding:0px;
+                        margin-bottom:10px;
+                        margin-top:0px;
+                        // border-bottom: 2px solid #ccc;
                         div{
                             padding: 0;
                             margin-left: 0;
                             span{
-                                font-weight: 600;
+                                font-weight: 400;
+                                display:block;
+                                padding:20px;
+
+                                text-align:center;
+                                box-shadow:0px -7px 7px -10px #000;
                                 font-size: 16px;
                             }
                             &:hover{
@@ -1187,21 +1208,21 @@ textarea {
             }
             .internships{
                 overflow: scroll;
-                padding-top: 20px;
-                max-height: 800px;
+                padding: 0px;
+                // max-height: 800px;
                 .individual-intern{
                     border-bottom: 1px solid #ddd;
-                    padding: 10px 0;
+                    box-shadow: 0px 3px 15px -2px #000;
+                    padding: 0px 0;
                     .container-fluid{
                         header{
                             border-bottom: 0;
-                            padding: 0;
+                            padding: 10px;
                             background: #ccc;
                             color: #111;
                         }
                         .row{
-                            margin-top: 10px;
-                            margin-bottom: 10px;
+                            margin:10px 0;
                             .title{
                                 font-size: 16px;
                                 font-weight: 600;
@@ -1213,11 +1234,13 @@ textarea {
                             margin-top: 20px;
                             button{
                                 width: 120px;
-                                border-radius: 0;
+                                padding:10px 0px;
                                 font-size: 16px;
                                 border: 0;
-                                background: #737373;
+                                background: #565656;
                                 color: #eee;
+                                font-weight:300;
+                                border-radius:5px;
                             }
                         }
                     }
@@ -1871,7 +1894,6 @@ textarea {
 .carousel {
   width: 100%;
   height: 100%;
-  min-height: 500px;
 }
 .carousel-fade .carousel-inner .item {
   -webkit-transition-property: opacity;
@@ -1903,11 +1925,17 @@ textarea {
 .carousel-fade .carousel-control .glyphicon {
   font-size: 6rem;
 }
+.glyphicon{
+    transform:translateY(-50%);
+    font-size: 4rem;
+    font-weight:300;
+}
 .carousel,
 .carousel-inner,
 .carousel-inner .item {
   height: 100%;
   min-height: 500px;
+  width:100%;
 }
 .stopfade {
   opacity: 0.5;
@@ -1919,38 +1947,63 @@ textarea {
   align-items: center;
   min-height: 100%;
 }
-.slide-content video {
+.slide-content img {
   position: absolute;
+  left:50%;
+  transform:translateX(-50%);
   display: block;
   min-width: 100%;
   min-height: 100%;
-  width: 100%;
-  height:100%;
   z-index: 0;
   transition: 1s opacity;
 }
-.slide-content video::-webkit-media-controls-start-playback-button {
-  display: none !important;
-  -webkit-appearance: none;
-}
 .door {
-  font-family: Revista-Black;
+  // font-family: Revista-Black;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
+  flex-direction:column;
+  align-items:center;
   width: 100%;
+  position:absolute;
+  bottom:15%;
+  // height:100%;
+  // transform:translateY(50%);
+  // background-color:rgba(0,0,0,0.4);
   z-index: 1;
 }
 .door .title {
-  font-size: 1.7rem;
+  font-size: 2.97em;
+  font-weight:400;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
+  z-index: 1;
+  text-shadow: 0 2px 2px #000;
 }
 .door .description {
-  border-top: 1px solid #fff;
-  width: 30%;
+  // border-top: 1px solid #fff;
+  width: 40%;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow:0 0 23px 5px rgba(0, 0, 0, 0.4);
   margin-top: 15px;
-  font-size: 1.2rem;
+  font-size: 1.5em;
+  z-index: 1;
+  text-shadow: 0 1px 1px #555;
+}
+@media screen and (max-width:1000px){
+    .door{
+        bottom:30%;
+        .title{
+            font-size:1.9em;
+            letter-spacing:0.1rem;
+        }
+        .description{
+            font-size:1.2em;
+            width:70%;
+        }
+    }
+}
+@media screen and (max-width:768px){
+    .glyphicon{
+        display:none!important;
+    }
 }
