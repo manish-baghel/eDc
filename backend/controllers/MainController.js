@@ -52,17 +52,17 @@ function admin(req,res,next){
 }
 function company(req,res,next){
     // requireRole(req,res,next,'company');
-    // if(sessionChecker(req,res,next,'company'))
+    if(sessionChecker(req,res,next,'company'))
     res.render('company/company.ejs');
 }
 function member(req,res,next){
     // requireRole(req,res,next,'member');
-    // if(sessionChecker(req,res,next,'member'))
+    if(sessionChecker(req,res,next,'member'))
     res.render('user/intern_listing.ejs');
 }
 function companyinternform(req,res,next){
     // requireRole(req,res,next,'company');
-    // if(sessionChecker(req,res,next,'company'))
+    if(sessionChecker(req,res,next,'company'))
     res.render('company/postIntern.ejs')
 }
 function send(req,res){
@@ -120,7 +120,19 @@ function requireRole(req,res,next,role) {
 var sessionChecker = (req, res, next,role) => {
     if (req.session.user && req.cookies.user_sid) {
         if(req.session.user.Role === role)
-            return true;
+        {
+            if(req.session.user.verify=== 0){
+                req.session.user = null;
+                res.redirect('/login');
+                // res.clearCookie('user_sid');
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+            
+        }
         else
         {
             res.redirect(req.session.user.Role);
