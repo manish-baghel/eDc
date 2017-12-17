@@ -86,7 +86,9 @@ var sessionChecker = (req, res, next) => {
 // route for user signup
 app.route('/signup')
     .get(sessionChecker, (req, res) => {
-        res.render('login/login.ejs');
+        res.render('login/login.ejs',{
+            user:req.session.user
+        });
     })
     .post((req, res) => {
         User.create({
@@ -128,7 +130,9 @@ app.route('/signup1')
 // route for user Login
 app.route('/login')
     .get(sessionChecker, (req, res) => {
-        res.render('login/login.ejs');
+        res.render('login/login.ejs',{
+            user:req.session.user
+        });
     })
     .post((req, res) => {
         var email = req.body.email,
@@ -175,7 +179,7 @@ app.get('/logout', (req, res) => {
     function checkEmail( to)
     {
         
-        link="http://localhost:4000/verify?id="+to+",di=jock";
+        link="http://localhost:4000/verify?id="+to+",di=kjfoaffknakn3232fkahfkd##a#kfhkashf23kjahf322kah332hfa$hfkdhfkjahkahfdhhehke";
         mailOptions={
             to : to,
             subject : "Please confirm your Email account",
