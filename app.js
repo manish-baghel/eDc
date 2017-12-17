@@ -131,7 +131,8 @@ app.route('/signup1')
 app.route('/login')
     .get(sessionChecker, (req, res) => {
         res.render('login/login.ejs',{
-            user:req.session.user
+            user:req.session.user,
+            message:''
         });
     })
     .post((req, res) => {
@@ -140,9 +141,15 @@ app.route('/login')
 
         User.findOne({ where: { email: email } }).then(function (user) {
             if (!user) {
-                res.redirect('/login');
+                res.render('login/login.ejs',{
+                    user: null,
+                    message: 'User does not exit'
+                });
             } else if (!user.validPassword(password)) {
-                res.redirect('/login');
+                res.render('login/login.ejs',{
+                    user: null,
+                    message: 'Oops! wrong password'
+                });
             } else {
                 req.session.user = user.dataValues;
                 res.redirect(req.session.user.Role);
