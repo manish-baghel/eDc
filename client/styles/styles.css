@@ -66,9 +66,6 @@ label {
     font-size: 2.1em;
     font-weight: 300; }
 
-ul.dropdown-menu {
-  background-color: black; }
-
 #banner {
   width: 100vw;
   height: 100vh; }
@@ -604,6 +601,7 @@ ul.dropdown-menu {
 
 #login-signup {
   height: 100vh;
+  min-height: 700px;
   margin-left: auto;
   margin-right: auto; }
   #login-signup a {

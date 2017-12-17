@@ -79,7 +79,7 @@
     });
 </script>
 <script>
-$('a[href*="#"]:not([href="#"]):not(a[href="#carousel"]):not(a[href="#st-login"]):not(a[href="#cp-login"]):not(a[href="#st-signup"]):not(a[href="#cp-signup"]):not(a[href="#student_form"]):not(a[href="#company_form"])').click(function() {
+$('a[href*="#"]:not([href="#"]):not(a[href="#carousel"]):not(a[href*="#st-login"]):not(a[href*="#cp-login"]):not(a[href*="#st-signup"]):not(a[href*="#cp-signup"]):not(a[href*="#student_form"]):not(a[href*="#company_form"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
         || location.hostname == this.hostname) {
 

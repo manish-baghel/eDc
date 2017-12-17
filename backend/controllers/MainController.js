@@ -26,7 +26,9 @@ module.exports = {
 //========== get request handling==========================
 //==========================================================
 function home(req,res){
-    res.render('index.ejs');
+    res.render('index.ejs', {
+        user:null
+    });
 }
 function login(req,res){
     res.render(
