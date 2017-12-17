@@ -7,45 +7,31 @@ var router = express.Router();
 var app = require('../../ApplicationInstance');
 
 
+//===============================================================
+//================== NORMAL GET REQUEST ROUTER ========================
+//===============================================================
+
 router.route('/').get(mainController.home);
 router.route('/login').get(mainController.login);
-//router.route('/ambulance/getAmbulance').get(mainController.getAmbulance);
-//router.route('/ambulance').post(mainController.ambulancePost);
-//router.route('/').post(mainController.postform);
+router.route('/admin').get(mainController.admin);
+router.route('/member').get(mainController.member);
+router.route('/company').get(mainController.company);
+router.route('/company/postintern').get(mainController.companyinternform);
+router.route('/logout').get(mainController.logout);
+
+//==============================================================
+//================  SPECIAL GET REQUEST ========================
+//================ NOT TO BE USED =============================
+//=============================================================
+router.route('/mail').get(mainController.mail);
+
+
+//==============================================================
+//================== POST REQUEST ROUTER =======================
+//==============================================================
+router.route('/companyPost').post(mainController.companyPost);
+router.route('/mem').post(mainController.mem);
+router.route('/admin').post(mainController.adminpost);
+router.route('/admin1').post(mainController.admin1post);
 
 module.exports = router;
-
-
-
-//Sample Route
-//
-//router.param('user_id', function(req, res, next, id) {
-//  // sample user, would actually fetch from DB, etc...
-//  req.user = {
-//    id: id,
-//    name: 'TJ'
-//  };
-//  next();
-//});
-//
-//router.route('/users/:user_id')
-//.all(function(req, res, next) {
-//  // runs for all HTTP verbs first
-//  // think of it as route specific middleware!
-//  next();
-//})
-//.get(function(req, res, next) {
-//  res.json(req.user);
-//})
-//.put(function(req, res, next) {
-//  // just an example of maybe updating the user
-//  req.user.name = req.params.name;
-//  // save user ... etc
-//  res.json(req.user);
-//})
-//.post(function(req, res, next) {
-//  next(new Error('not implemented'));
-//})
-//.delete(function(req, res, next) {
-//  next(new Error('not implemented'));
-//})
