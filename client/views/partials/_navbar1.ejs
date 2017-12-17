@@ -19,7 +19,18 @@
         <li><a style="color:#eee!important;" href="/#programs">Our Programs</a></li>
         <li><a style="color:#eee!important;" href="/#about">Events</a></li>
         <li><a style="color:#eee!important;" href="/#footer">Contact</a></li>
-        <li><a style="color:#eee!important;" href="/login">Login/Signup</a></li>
+        <%if (user) { %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= user.name %><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/login">Dashboard</a></li>
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+            </li>
+        <% } %>
+        <%if (user==null) { %>
+          <li><a href="/login">Login/Signup</a></li>
+        <% } %>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
