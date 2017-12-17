@@ -31,7 +31,8 @@ module.exports = {
     send:send,
     signup:signup,
     loginpost:loginpost,
-    companyforms:companyforms
+    companyforms:companyforms,
+    verify: verify
 }
 
 //==========================================================
@@ -122,7 +123,19 @@ function logout(req,res){
 function mail(req,res){
     res.render('other/mail.ejs');
 }
+function verify(req,res){
+    var email = req.query.id.split(",")[0];
+    connection.query('UPDATE users SET verify="1" where email = ?',email,function(err,results,fields){
+        console.log('hey there');
+        console.log('results');
+        var result;
+        if(err) throw err;
+        result = parseIt(results);
 
+        console.log(results);
+        return res.redirect('/admin');
+    });
+}
 //===========================================================
 //========= checks role of user =============================
 //===========================================================
@@ -255,7 +268,7 @@ function admin1post(req,res){
         console.log(results);
         return res.redirect('/admin');
 });
-};
+}
 function adminpost(req,res){
         connection.query('SELECT * FROM form where approved = "0"',function(err,results,fields){
         console.log('hey there');
@@ -267,7 +280,7 @@ function adminpost(req,res){
         console.log(results);
         return res.json(result);
 });
-};
+}
 function loginpost(req,res,next){
     console.log(req.body);
     // SELECT * FROM `users` WHERE `email` = 'sunilssaharan@gmail.com' 

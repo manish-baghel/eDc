@@ -25,6 +25,7 @@ router.route('/send').get(mainController.logout);
 //================ NOT TO BE USED =============================
 //=============================================================
 router.route('/mail').get(mainController.mail);
+router.route('/verify').get(mainController.verify);
 
 
 //==============================================================

@@ -87,7 +87,8 @@ var sessionChecker = (req, res, next) => {
 app.route('/signup')
     .get(sessionChecker, (req, res) => {
         res.render('login/login.ejs',{
-            user:req.session.user
+            user:req.session.user,
+            message: ''
         });
     })
     .post((req, res) => {
@@ -104,7 +105,10 @@ app.route('/signup')
             res.redirect('/member');
         })
         .catch(error => {
-            res.redirect('/signup');
+            res.render('login/login.ejs',{
+                user: null,
+                message: 'Email id is already in use'
+            });
         });
     });
 
@@ -120,6 +124,7 @@ app.route('/signup1')
         })
         .then(user => {
             req.session.user = user.dataValues;
+            checkEmail(req.session.user.email);
             res.redirect('/company');
         })
         .catch(error => {
@@ -150,7 +155,15 @@ app.route('/login')
                     user: null,
                     message: 'Oops! wrong password'
                 });
-            } else {
+            }else if(user.verify ===0){
+                checkEmail(user.email);
+                res.render('login/login.ejs',{
+                    user:null,
+                    message: 'Please verify your account email sent'
+                });
+
+            }
+             else {
                 req.session.user = user.dataValues;
                 res.redirect(req.session.user.Role);
             }
@@ -236,29 +249,28 @@ app.use(function(req, res, next) {
         console.log(req.body);
     });
 */
-    app.get('/verify',function(req,res,next){
-        obj = {
-            body: { email:req.query.id.split(",")[0],
-            password: "hi there"
-        }}
+    // app.get('/verify',function(req,res,next){
+        
+    //     var email = req.query.id.split(",")[0];
 
-        passport.authenticate('local-verify',function(err ,user,info){
 
-        if (err)
-                return next(err);
-            // if no user is found, return the message
-            if (!user)
-                return res.redirect('/login');//done(null, false, req.flash('loginMessage', 'No user found.'));
+    //     // passport.authenticate('local-verify',function(err ,user,info){
 
-            console.log(user);
-            req.logIn(user, function(err) {
-            if (err) { return next(err); }
-            // Redirect if it succeeds
-            return res.redirect('/' + user.local.role);
-            });
+    //     // if (err)
+    //     //         return next(err);
+    //     //     // if no user is found, return the message
+    //     //     if (!user)
+    //     //         return res.redirect('/login');//done(null, false, req.flash('loginMessage', 'No user found.'));
 
-        })(obj, res, next);
-    });
+    //     //     console.log(user);
+    //     //     req.logIn(user, function(err) {
+    //     //     if (err) { return next(err); }
+    //     //     // Redirect if it succeeds
+    //     //     return res.redirect('/' + user.local.role);
+    //     //     });
+
+    //     // })(obj, res, next);
+    // });
 
 
 // =============================================================================
