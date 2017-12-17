@@ -26,28 +26,6 @@ label {
 .control-label {
   font-weight: bold; }
 
-@keyframes slide {
-  0% {
-    left: 0%; }
-  17% {
-    left: 0%; }
-  20% {
-    left: -100%; }
-  37% {
-    left: -100%; }
-  40% {
-    left: -200%; }
-  57% {
-    left: -200%; }
-  60% {
-    left: -300%; }
-  77% {
-    left: -300%; }
-  80% {
-    left: -400%; }
-  100% {
-    left: -400%; } }
-
 .navbar {
   color: white; }
 
@@ -75,18 +53,18 @@ label {
 
 /* opaque navbar */
 .navbar-default.opaque {
-  background-color: #353535 !important;
-  transition: background-color 0.8s ease; }
+  background-color: #232323 !important;
+  transition: all 0.8s ease; }
   .navbar-default.opaque .navbar-toggle .icon-bar {
     background-color: #eee; }
   .navbar-default.opaque .navbar-nav li a {
     color: #eee;
-    font-size: 1.3em;
-    font-weight: lighter; }
+    font-size: 1.4em;
+    font-weight: 300; }
   .navbar-default.opaque .navbar-header a {
     color: #eee;
     font-size: 2.1em;
-    font-weight: lighter; }
+    font-weight: 300; }
 
 ul.dropdown-menu {
   background-color: black; }
@@ -281,7 +259,6 @@ ul.dropdown-menu {
   #programs {
     width: 100%;
     background: #efefef;
-    padding: 10px 0 40px 0;
     text-align: center;
     overflow: hidden; }
     #programs .container-fluid {
@@ -445,7 +422,6 @@ ul.dropdown-menu {
   #programs {
     width: 100%;
     background: #efefef;
-    padding: 10px 0 40px 0;
     text-align: center;
     overflow: hidden; }
     #programs .container-fluid header {
@@ -776,7 +752,7 @@ ul.dropdown-menu {
 
 #internships {
   height: 900px;
-  margin-top: 20px;
+  margin-top: 60px;
   margin-bottom: 30px; }
   #internships .container-fluid {
     background: #fff;
@@ -786,29 +762,26 @@ ul.dropdown-menu {
       font-size: 24px;
       font-weight: 500;
       padding-bottom: 20px;
-      border-bottom: 1px solid #ddd; }
-    #internships .container-fluid .row {
-      margin-top: 20px;
+      box-shadow: 0px 4px 24px -4px #fff; }
+    #internships .container-fluid > .row {
+      margin-top: 0px;
+      margin: 0;
       height: 100%; }
-      #internships .container-fluid .row .filters {
-        height: 80%;
-        padding-right: 20px;
-        border-right: 1px solid #ddd; }
-      #internships .container-fluid .row .listings {
+      #internships .container-fluid > .row .listings {
         overflow: scroll;
         max-height: 800px; }
-        #internships .container-fluid .row .listings .individual-intern {
+        #internships .container-fluid > .row .listings .individual-intern {
           border-bottom: 1px solid #ddd;
           padding: 10px 0; }
-          #internships .container-fluid .row .listings .individual-intern .container-fluid header {
-            border-bottom: 0;
+          #internships .container-fluid > .row .listings .individual-intern .container-fluid header {
+            border: 0;
             padding: 0; }
-          #internships .container-fluid .row .listings .individual-intern .container-fluid .row {
+          #internships .container-fluid > .row .listings .individual-intern .container-fluid .row {
             margin-top: 10px;
             margin-bottom: 10px; }
-          #internships .container-fluid .row .listings .individual-intern .container-fluid .button-row {
+          #internships .container-fluid > .row .listings .individual-intern .container-fluid .button-row {
             margin-top: 20px; }
-            #internships .container-fluid .row .listings .individual-intern .container-fluid .button-row button {
+            #internships .container-fluid > .row .listings .individual-intern .container-fluid .button-row button {
               width: 120px;
               border-radius: 0;
               font-size: 16px;
@@ -1327,8 +1300,7 @@ ul.dropdown-menu {
 
 .carousel {
   width: 100%;
-  height: 100%;
-  min-height: 500px; }
+  height: 100%; }
 
 .carousel-fade .carousel-inner .item {
   -webkit-transition-property: opacity;
@@ -1360,11 +1332,17 @@ ul.dropdown-menu {
 .carousel-fade .carousel-control .glyphicon {
   font-size: 6rem; }
 
+.glyphicon {
+  transform: translateY(-50%);
+  font-size: 4rem;
+  font-weight: 300; }
+
 .carousel,
 .carousel-inner,
 .carousel-inner .item {
   height: 100%;
-  min-height: 500px; }
+  min-height: 500px;
+  width: 100%; }
 
 .stopfade {
   opacity: 0.5; }
@@ -1376,37 +1354,53 @@ ul.dropdown-menu {
   align-items: center;
   min-height: 100%; }
 
-.slide-content video {
+.slide-content img {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: block;
   min-width: 100%;
   min-height: 100%;
-  width: 100%;
-  height: 100%;
   z-index: 0;
   transition: 1s opacity; }
 
-.slide-content video::-webkit-media-controls-start-playback-button {
-  display: none !important;
-  -webkit-appearance: none; }
-
 .door {
-  font-family: Revista-Black;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 100%;
   width: 100%;
+  position: absolute;
+  bottom: 15%;
   z-index: 1; }
 
 .door .title {
-  font-size: 1.7rem;
+  font-size: 2.97em;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.3rem; }
+  letter-spacing: 0.3rem;
+  z-index: 1;
+  text-shadow: 0 2px 2px #000; }
 
 .door .description {
-  border-top: 1px solid #fff;
-  width: 30%;
+  width: 40%;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 23px 5px rgba(0, 0, 0, 0.4);
   margin-top: 15px;
-  font-size: 1.2rem; }
+  font-size: 1.5em;
+  z-index: 1;
+  text-shadow: 0 1px 1px #555; }
+
+@media screen and (max-width: 1000px) {
+  .door {
+    bottom: 30%; }
+    .door .title {
+      font-size: 1.9em;
+      letter-spacing: 0.1rem; }
+    .door .description {
+      font-size: 1.2em;
+      width: 70%; } }
+
+@media screen and (max-width: 768px) {
+  .glyphicon {
+    display: none !important; } }
