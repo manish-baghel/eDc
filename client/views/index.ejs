@@ -18,8 +18,58 @@
 <%include home_partials/counter.ejs%>
 <!-- Footer   -->
 <%include partials/_footer_content.ejs%>
-   
+  
+ <!--Additional Script for HOme Carousels  -->
+ <script>
+// <!-- Banner Slider -->
+$(document).ready(function() {
+  $(document).on('init.slides', function() {
+    $('.loading-container').fadeOut(function() {
+      $(this).remove();
+    });
+  });
+  $('#slides').superslides({
+    slide_easing: 'ease-in-out',
+    slide_speed: 800,
+    pagination: false,
+    play:4000,
+    hashchange: false,
+    scrollable: true
+  });
+  
+
+  document.ontouchmove = function(e) {
+    e.preventDefault();
+  };
+  $('#slides').hammer().on('swipeleft', function() {
+    $(this).superslides('animate', 'next');
+  });
+
+  $('#slides').hammer().on('swiperight', function() {
+    $(this).superslides('animate', 'prev');
+  });
+  $('#slides').hammer().on('swipeup', function() {
+    $('html,body').animate({
+            scrollTop: $('#about').offset().top
+    },500);
+  });
+  $('#slides').hammer().on('swipedown', function() {
+    $('html,body').animate({
+            scrollTop: $('#slides').offset().top
+    },500);
+  });
+});
+
+// <!-- Program Carousel init -->
+$('.carousel').carousel({
+  interval: 5000
+})
+</script>
+
+<!-- Footer script -->
 <%include partials/_footer_script.ejs%>
+
+
 
 </body>
 </html>
