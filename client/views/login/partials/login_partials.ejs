@@ -1,4 +1,7 @@
  <section id="login-signup">
+      <% if(message.length>0) {%>
+        <div class="alert alert-danger"><%= message %></div>
+      <% } %>
      <div class="tab-group tab-group-parent parent">
          <li class="tab tab-parent active"><a href="#student_form">Student Login</a></li>
          <li class="tab tab-parent"><a href="#company_form">Company Login</a></li>
