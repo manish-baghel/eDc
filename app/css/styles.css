@@ -751,99 +751,109 @@ ul.dropdown-menu {
     text-align: right; }
 
 #internships {
-  height: 900px;
   margin-top: 60px;
   margin-bottom: 30px; }
   #internships .container-fluid {
+    padding: 10px;
     background: #fff;
+    box-shadow: 0px 5px 16px -3px #000;
     height: 100%;
     max-width: 1200px; }
     #internships .container-fluid header {
       font-size: 24px;
       font-weight: 500;
       padding-bottom: 20px;
+      border-bottom: 1px #353535 solid;
       box-shadow: 0px 4px 24px -4px #fff; }
-    #internships .container-fluid > .row {
+    #internships .container-fluid .row {
       margin-top: 0px;
-      margin: 0;
-      height: 100%; }
-      #internships .container-fluid > .row .listings {
-        overflow: scroll;
-        max-height: 800px; }
-        #internships .container-fluid > .row .listings .individual-intern {
+      margin: 0; }
+      #internships .container-fluid .row .listings {
+        padding: 0; }
+        #internships .container-fluid .row .listings .individual-intern {
           border-bottom: 1px solid #ddd;
           padding: 10px 0; }
-          #internships .container-fluid > .row .listings .individual-intern .container-fluid header {
-            border: 0;
-            padding: 0; }
-          #internships .container-fluid > .row .listings .individual-intern .container-fluid .row {
-            margin-top: 10px;
-            margin-bottom: 10px; }
-          #internships .container-fluid > .row .listings .individual-intern .container-fluid .button-row {
-            margin-top: 20px; }
-            #internships .container-fluid > .row .listings .individual-intern .container-fluid .button-row button {
-              width: 120px;
-              border-radius: 0;
-              font-size: 16px;
+          #internships .container-fluid .row .listings .individual-intern .container-fluid {
+            box-shadow: none; }
+            #internships .container-fluid .row .listings .individual-intern .container-fluid header {
               border: 0;
-              background: #737373;
-              color: #eee; }
+              padding: 0; }
+            #internships .container-fluid .row .listings .individual-intern .container-fluid .row {
+              padding: 0;
+              margin-top: 10px;
+              margin-bottom: 10px; }
+              #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-xs-1, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-sm-1, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-md-1, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-lg-1, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-xs-2, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-sm-2, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-md-2, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-lg-2, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-xs-3, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-sm-3, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-md-3, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-lg-3, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-xs-4, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-sm-4, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-md-4, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-lg-4, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-xs-5, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-sm-5, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-md-5, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-lg-5, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-xs-6, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-sm-6, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-md-6, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-lg-6, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-xs-7, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-sm-7, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-md-7, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-lg-7, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-xs-8, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-sm-8, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-md-8, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-lg-8, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-xs-9, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-sm-9, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-md-9, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-lg-9, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-xs-10, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-sm-10, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-md-10, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-lg-10, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-xs-11, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-sm-11, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-md-11, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-lg-11, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-xs-12, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-sm-12, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-md-12, #internships .container-fluid .row .listings .individual-intern .container-fluid .row .col-lg-12 {
+                padding: 0; }
+            #internships .container-fluid .row .listings .individual-intern .container-fluid .button-row {
+              margin-top: 20px; }
+              #internships .container-fluid .row .listings .individual-intern .container-fluid .button-row button {
+                width: 120px;
+                padding: 10px 0px;
+                font-size: 16px;
+                border: 0;
+                background: #565656;
+                color: #eee;
+                font-weight: 300;
+                border-radius: 5px; }
 
 #dashboard {
-  max-height: 900px;
   margin-top: 60px;
   margin-bottom: 30px; }
   #dashboard .container-fluid {
     background: #fff;
     height: 100%;
     padding: 0;
+    box-shadow: 0px 5px 16px -3px #000;
     max-width: 1200px; }
     #dashboard .container-fluid header {
       font-size: 24px;
-      font-weight: 500;
+      font-weight: 300;
+      letter-spacing: 1.7px;
       padding: 10px 20px 10px 20px;
       border-bottom: 1px solid #ddd;
-      background: #aaa;
-      color: #fff; }
+      background: #353535;
+      color: #eee; }
     #dashboard .container-fluid .row {
-      margin-left: 0;
-      margin-top: 0px;
+      margin: 0;
       height: 100%; }
       #dashboard .container-fluid .row .options {
-        height: 80%;
-        min-height: 600px;
-        background-color: #ccc;
-        padding-right: 20px;
-        padding-top: 20px;
-        border-right: 1px solid #ddd; }
+        height: 100%;
+        background-color: transparent;
+        padding: 0; }
         #dashboard .container-fluid .row .options .container-fluid {
-          background: transparent; }
+          background: transparent;
+          box-shadow: none; }
           #dashboard .container-fluid .row .options .container-fluid .row {
-            height: 50px;
-            border-bottom: 2px solid #ccc; }
+            height: auto;
+            padding: 0px;
+            margin-bottom: 10px;
+            margin-top: 0px; }
             #dashboard .container-fluid .row .options .container-fluid .row div {
               padding: 0;
               margin-left: 0; }
               #dashboard .container-fluid .row .options .container-fluid .row div span {
-                font-weight: 600;
+                font-weight: 400;
+                display: block;
+                padding: 20px;
+                text-align: center;
+                box-shadow: 0px -7px 7px -10px #000;
                 font-size: 16px; }
               #dashboard .container-fluid .row .options .container-fluid .row div:hover {
                 cursor: pointer; }
       #dashboard .container-fluid .row .internships {
         overflow: scroll;
-        padding-top: 20px;
-        max-height: 800px; }
+        padding: 0px; }
         #dashboard .container-fluid .row .internships .individual-intern {
           border-bottom: 1px solid #ddd;
-          padding: 10px 0; }
+          box-shadow: 0px 3px 15px -2px #000;
+          padding: 0px 0; }
           #dashboard .container-fluid .row .internships .individual-intern .container-fluid header {
             border-bottom: 0;
-            padding: 0;
+            padding: 10px;
             background: #ccc;
             color: #111; }
           #dashboard .container-fluid .row .internships .individual-intern .container-fluid .row {
-            margin-top: 10px;
-            margin-bottom: 10px; }
+            margin: 10px 0; }
             #dashboard .container-fluid .row .internships .individual-intern .container-fluid .row .title {
               font-size: 16px;
               font-weight: 600;
@@ -853,11 +863,13 @@ ul.dropdown-menu {
             margin-top: 20px; }
             #dashboard .container-fluid .row .internships .individual-intern .container-fluid .button-row button {
               width: 120px;
-              border-radius: 0;
+              padding: 10px 0px;
               font-size: 16px;
               border: 0;
-              background: #737373;
-              color: #eee; }
+              background: #565656;
+              color: #eee;
+              font-weight: 300;
+              border-radius: 5px; }
 
 @media screen and (max-width: 768px) {
   #dashboard .container-fluid .row .options {

@@ -64,9 +64,10 @@ $(document).ready(function() {
   });
 
   $('#slides').superslides({
-    slide_easing: 'fade',
+    slide_easing: 'ease-in-out',
     slide_speed: 800,
     pagination: false,
+    play:4000,
     hashchange: false,
     scrollable: true
   });

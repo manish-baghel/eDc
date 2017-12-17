@@ -1,7 +1,7 @@
-<script src="../../scripts/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.js"></script>
 <script src="../../scripts/bootstrap.js"></script>
-<script  src="../../scripts/login.js"></script>
 <script src="../../scripts/script.js"></script>
+<script src="../../scripts/login.js"></script>
 <script>
     window.sr = ScrollReveal();
     sr.reveal('.navbar', {
@@ -77,4 +77,20 @@
         origin:'bottom',
         distance:'30px'
     });
+</script>
+<script>
+$('a[href*="#"]:not([href="#"]):not(a[href="#carousel"]):not(a[href="#st-login"]):not(a[href="#cp-login"]):not(a[href="#st-signup"]):not(a[href="#cp-signup"]):not(a[href="#student_form"]):not(a[href="#company_form"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 600);
+            return false;
+        }
+    }
+});
 </script>
