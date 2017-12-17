@@ -3,6 +3,17 @@
  */
 var database = require('../Models/db_model');
 var connection = require('../../config');
+var nodemailer = require('nodemailer');
+
+//creating smtp transport
+var smtpTransport = nodemailer.createTransport({
+    service: "gmail",
+    host: "smtp.gmail.com",
+    auth: {
+        user: "edciitd2017@gmail.com",
+        pass: "123qwerty123"
+    }
+});
 
 module.exports = {
     home:home,
