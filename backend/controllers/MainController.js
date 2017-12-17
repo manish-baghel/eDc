@@ -19,7 +19,8 @@ module.exports = {
     mem:mem,
     send:send,
     signup:signup,
-    loginpost:loginpost
+    loginpost:loginpost,
+    companyforms:companyforms
 }
 
 //==========================================================
@@ -61,7 +62,7 @@ function member(req,res,next){
 }
 function companyinternform(req,res,next){
     // requireRole(req,res,next,'company');
-    if(sessionChecker(req,res,next,'company'))
+    // if(sessionChecker(req,res,next,'company'))
     res.render('company/postIntern.ejs')
 }
 function send(req,res){

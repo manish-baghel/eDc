@@ -32,6 +32,7 @@ router.route('/mail').get(mainController.mail);
 //==============================================================
 router.route('/companyPost').post(mainController.companyPost);
 router.route('/mem').post(mainController.mem);
+router.route('/mem1').post(mainController.companyforms)
 router.route('/admin').post(mainController.adminpost);
 router.route('/admin1').post(mainController.admin1post);
 // router.route('/login').post(mainController.loginpost);
