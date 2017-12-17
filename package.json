@@ -20,6 +20,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.1.2",
     "gulp-useref": "^3.1.2",
+    "nodemon": "^1.13.3",
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
@@ -39,7 +40,6 @@
     "mysql": "^2.14.1",
     "mysql2": "^1.5.1",
     "nodemailer": "latest",
-    "nodemon": "^1.13.3",
     "passport": "^0.1.17",
     "passport-local": "^0.1.6",
     "path": "^0.12.7",
