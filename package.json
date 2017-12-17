@@ -37,12 +37,14 @@
     "mongoose": "^4.6.8",
     "morgan": "^1.7.0",
     "mysql": "^2.14.1",
+    "mysql2": "^1.5.1",
     "nodemailer": "latest",
     "nodemon": "^1.13.3",
     "passport": "^0.1.17",
     "passport-local": "^0.1.6",
     "path": "^0.12.7",
     "q": "^1.5.0",
+    "sequelize": "^4.28.5",
     "underscore": "1.6.0"
   }
 }

@@ -16,7 +16,10 @@ module.exports = {
     logout:logout,
     adminpost:adminpost,
     admin1post:admin1post,
-    mem:mem
+    mem:mem,
+    send:send,
+    signup:signup,
+    loginpost:loginpost
 }
 
 //==========================================================
@@ -27,30 +30,65 @@ function home(req,res){
 }
 function login(req,res){
     res.render(
-        'login/login',
+        'login/login.ejs',
         {message: req.flash('loginMessage')}
     );
 }
+function signup(req, res) {
+res.render(
+    'login/login.ejs',
+     {message: req.flash('signupMessage')}
+     );
+// (function(){
+//     if(true)
+//     return; 
+// });;
+};
 function admin(req,res,next){
     // requireRole(req,res,next,'admin');
+    if(sessionChecker(req,res,next,'admin'))
     res.render('other/admin.ejs');
 }
 function company(req,res,next){
     // requireRole(req,res,next,'company');
+    // if(sessionChecker(req,res,next,'company'))
     res.render('company/company.ejs');
 }
 function member(req,res,next){
-    requireRole(req,res,next,'member');
+    // requireRole(req,res,next,'member');
+    // if(sessionChecker(req,res,next,'member'))
     res.render('user/intern_listing.ejs');
 }
 function companyinternform(req,res,next){
     // requireRole(req,res,next,'company');
+    if(sessionChecker(req,res,next,'company'))
     res.render('company/postIntern.ejs')
 }
+function send(req,res){
+
+    var mailOptions={
+       to : req.query.to,
+       subject : req.query.subject,
+       text : req.query.text
+    }
+    console.log(mailOptions);
+    smtpTransport.sendMail(mailOptions, function(error, response){
+        if(error){
+            console.log(error);
+            res.end("error");
+        }
+        else{
+            console.log("Message sent: " + response.message);
+            res.end("sent");
+        }
+    });
+
+};
+
 //========= Logout ==================================
 function logout(req,res){
     req.logout();
-    req.redirect('/');
+    res.redirect('/');
 }
 
 //==========================================================
@@ -64,6 +102,7 @@ function mail(req,res){
 //========= checks role of user =============================
 //===========================================================
 function requireRole(req,res,next,role) {    
+    console.log(req.user);
     if(typeof req.user != "undefined")
     { 
         if ( req.user.local.role === role) {
@@ -76,6 +115,22 @@ function requireRole(req,res,next,role) {
         res.redirect('/login');
     }
 }
+
+var sessionChecker = (req, res, next,role) => {
+    if (req.session.user && req.cookies.user_sid) {
+        if(req.session.user.Role === role)
+            return true;
+        else
+        {
+            res.redirect(req.session.user.Role);
+            return false;
+        }
+    } else {
+        res.redirect('/login');
+        return false;
+        // next();
+    }    
+};
 
 
 //==========================================================
@@ -126,7 +181,20 @@ function companyPost(req,res,next){
 }
 
 function mem(req,res){
-    connection.query('SELECT * FROM form ',function(err,results,fields){
+    connection.query('SELECT * FROM form where approved = "1"',function(err,results,fields){
+    console.log('hey there');
+    console.log('results');
+    var result;
+    if(err) throw err;
+    result = parseIt(results);
+
+    console.log(results);
+    return res.json(result);
+    });
+};
+
+function companyforms(req,res){
+    connection.query('SELECT * FROM form',function(err,results,fields){
     console.log('hey there');
     console.log('results');
     var result;
@@ -163,7 +231,43 @@ function adminpost(req,res){
         return res.json(result);
 });
 };
+function loginpost(req,res,next){
+    console.log(req.body);
+    // SELECT * FROM `users` WHERE `email` = 'sunilssaharan@gmail.com' 
+    connection.query("SELECT * FROM `users` WHERE `email` = "+'\''+req.body.email+'\''+" AND `password` = "+'\''+req.body.password+'\'',function(err,results,fields){
+    console.log('hey there');
+    console.log('results');
+    var result;
+    if(err) throw err;
+    result = parseIt(results);
+    if(!Object.keys(results).length==0)
+    {
+        if(!results[0].verified==0)
+        {
 
+        }
+        else
+        {
+            var user = results[0];
+            console.log(results[0]+'\n\n');
+            req.logIn(user,function(err)
+            {
+                if(err){
+                    // return next(err);
+                }
+                
+            });
+            res.redirect('/'+results[0].role);
+            
+        }
+    }
+    else
+    {
+        res.redirect('/login');
+    }
+
+    });   
+}
 
 
 
