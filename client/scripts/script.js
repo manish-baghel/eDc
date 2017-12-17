@@ -7,23 +7,7 @@ $(document).click(function (event) {
         }
 });
 
-//Toggle tranparent navbar when the user scrolls the page
-$(window).scroll(function() {
-        // let y = $(this).scrollTop();
-        // console.log(y);
-        // y = -(y/4);
-        // let z = (y*2)+100;
-        // $('.banner-div').css("background-position-y",y);
-        // if($(window).width()>480){
-        //     $('.parallax').css("background-position-y",z);
-        // }
-        if($(this).scrollTop() > 300)  /*height in pixels when the navbar becomes non opaque*/ 
-        {
-            $('.navbar-default').addClass('opaque');
-        } else {
-            $('.navbar-default').removeClass('opaque');
-        }
-});
+
 
 var a = 0;
 $(window).scroll(function() {
@@ -123,8 +107,6 @@ $(window).scroll(function() {
     document.addEventListener('DOMContentLoaded',function(){
         loadElements();
         addEventListener();
-//        bannerSlider();
-        smoothScrollAnchors();
     });
     
 //    Custom Functions

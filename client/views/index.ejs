@@ -19,8 +19,25 @@
 <!-- Footer   -->
 <%include partials/_footer_content.ejs%>
   
- <!--Additional Script for HOme Carousels  -->
+ <!--Additional Script for HOme Carousels and opaque nav -->
  <script>
+ //Toggle tranparent navbar when the user scrolls the page
+$(window).scroll(function() {
+        // let y = $(this).scrollTop();
+        // console.log(y);
+        // y = -(y/4);
+        // let z = (y*2)+100;
+        // $('.banner-div').css("background-position-y",y);
+        // if($(window).width()>480){
+        //     $('.parallax').css("background-position-y",z);
+        // }
+        if($(this).scrollTop() > 300)  /*height in pixels when the navbar becomes non opaque*/ 
+        {
+            $('.navbar-default').addClass('opaque');
+        } else {
+            $('.navbar-default').removeClass('opaque');
+        }
+});
 // <!-- Banner Slider -->
 $(document).ready(function() {
   $(document).on('init.slides', function() {

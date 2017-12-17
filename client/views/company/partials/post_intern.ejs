@@ -1,4 +1,4 @@
-<section id="intern_posting">
+e<section id="intern_posting">
     <div class="container-fluid">
         <div class="max-width-container">
             <div id="content-inner">
@@ -108,8 +108,14 @@
                             </div>
                             <div class="profile_input_container" style="">
                                 <label>
+                                Other
                                     <input type="text" class="form-control ui-autocomplete-input" id="profile" name="profile_input" placeholder="Type your internship profile" value="" autocomplete="off">
-                                    Other
+                                </label>
+                            </div>
+                            <div class="profile_input_container" style="margin-top:8px;">
+                                <label>
+                                Job Title*
+                                    <input type="text" class="form-control ui-autocomplete-input" id="job_title" name="job_title" placeholder="Type Job Title" value="" autocomplete="off">
                                 </label>
                             </div>
                             <div class="profile_suggestion"></div>
@@ -130,11 +136,15 @@
                 </div>
                             </div>
                         </div>
-                            <div class="form-group" id="no_of_openings_container" >
+        <div class="form-group" id="location_container" >
+            <label for="open_positions" class="control-label">Enter Location<span class="label_hint">(if any)</span></label>
+            <input type="text" value="" class="form-control" id="location" name="location" placeholder="Location of Internship">
+        </div>
+        <div class="form-group" id="no_of_openings_container" >
             <label for="open_positions" class="control-label">Number of openings* <span class="label_hint">(Enter only numbers)</span></label>
             <input type="number" value="" class="form-control" id="open_positions" name="open_positions" placeholder="Type the number of interns you want to hire" validators="required">
         </div>
-                            <div class="form-group" id="starts_on_container">
+        <div class="form-group" id="starts_on_container">
             <label class="control-label">Internship start date*</label>
             <div id="later_date_option_container">
                 <div class="later_date_option">
@@ -144,6 +154,14 @@
                 <div class="later_date_option">
                     to 
                     <input type="date" value="" class="form-control hasDatepicker" id="start_date_2" name="start_date_2" placeholder="Choose date">
+                </div>
+            </div>
+        </div>
+        <div class="form-group" id="last_date_container">
+            <label class="control-label">Last Date to Apply*</label>
+            <div id="last_date_option_container">
+                <div class="last_date_option">
+                    <input type="date" value="" class="form-control hasDatepicker" id="last_date" name="last_date" placeholder="Choose date">
                 </div>
             </div>
         </div>
