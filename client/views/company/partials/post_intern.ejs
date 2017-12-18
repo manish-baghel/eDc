@@ -115,7 +115,7 @@ e<section id="intern_posting">
                             <div class="profile_input_container" style="margin-top:8px;">
                                 <label>
                                 Job Title*
-                                    <input type="text" class="form-control ui-autocomplete-input" id="job_title" name="job_title" placeholder="Type Job Title" value="" autocomplete="off">
+                                    <input type="text" class="form-control ui-autocomplete-input" id="job_title" name="job_title" placeholder="Type Job Title" value="" autocomplete="off" required>
                                 </label>
                             </div>
                             <div class="profile_suggestion"></div>
@@ -142,18 +142,18 @@ e<section id="intern_posting">
         </div>
         <div class="form-group" id="no_of_openings_container" >
             <label for="open_positions" class="control-label">Number of openings* <span class="label_hint">(Enter only numbers)</span></label>
-            <input type="number" value="" class="form-control" id="open_positions" name="open_positions" placeholder="Type the number of interns you want to hire" validators="required">
+            <input type="number" value="" class="form-control" id="open_positions" name="open_positions" placeholder="Type the number of interns you want to hire" validators="required" required>
         </div>
         <div class="form-group" id="starts_on_container">
             <label class="control-label">Internship start date*</label>
             <div id="later_date_option_container">
                 <div class="later_date_option">
                     Between 
-                    <input type="date" value="" class="form-control hasDatepicker" id="start_date_1" name="start_date_1" placeholder="Choose date">
+                    <input type="date" value="" class="form-control hasDatepicker" id="start_date_1" name="start_date_1" placeholder="Choose date" required>
                 </div>
                 <div class="later_date_option">
                     to 
-                    <input type="date" value="" class="form-control hasDatepicker" id="start_date_2" name="start_date_2" placeholder="Choose date">
+                    <input type="date" value="" class="form-control hasDatepicker" id="start_date_2" name="start_date_2" placeholder="Choose date" required>
                 </div>
             </div>
         </div>
@@ -161,7 +161,7 @@ e<section id="intern_posting">
             <label class="control-label">Last Date to Apply*</label>
             <div id="last_date_option_container">
                 <div class="last_date_option">
-                    <input type="date" value="" class="form-control hasDatepicker" id="last_date" name="last_date" placeholder="Choose date">
+                    <input type="date" value="" class="form-control hasDatepicker" id="last_date" name="last_date" placeholder="Choose date" required>
                 </div>
             </div>
         </div>
@@ -172,7 +172,7 @@ e<section id="intern_posting">
     <div class="form-group">
         <div id="jd_container_inner">
             <label id="intern_description" class="control-label">Write a detailed yet crisp description of intern's responsibilities and convey the excitement of the role *:</label>
-            <textarea class="form-control" id="description" name="description" resize="false"></textarea>
+            <textarea class="form-control" id="description" name="description" resize="false" required></textarea>
         </div>
     </div>
 </div>
@@ -259,7 +259,7 @@ e<section id="intern_posting">
                         <h5>Who can apply</h5>
                         <div class="form-group">
                             <label for="skills" class="control-label">Skill(s) that you are looking for: <span class="label_hint">(Type one or more skills) (Recommended)</span></label>
-                            <input type="text" value="" class="form-control ui-autocomplete-input" id="skills" name="skill" placeholder="Ex: PHP, Adobe Photoshop, MS-Office, English Proficiency etc" validators="required" autocomplete="off">
+                            <input type="text" value="" class="form-control ui-autocomplete-input" id="skills" name="skill" placeholder="Ex: PHP, Adobe Photoshop, MS-Office, English Proficiency etc" validators="required" autocomplete="off" required>
                         </div>
                     </div>
                     <div id="button_container_section" style="clear:both;">

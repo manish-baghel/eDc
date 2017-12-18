@@ -32,7 +32,8 @@ module.exports = {
     signup:signup,
     loginpost:loginpost,
     companyforms:companyforms,
-    verify: verify
+    verify: verify,
+    team:team
 }
 
 //==========================================================
@@ -40,6 +41,11 @@ module.exports = {
 //==========================================================
 function home(req,res){
     res.render('index.ejs', {
+        user:req.session.user
+    });
+}
+function team(req,res){
+    res.render('team/team.ejs', {
         user:req.session.user
     });
 }
