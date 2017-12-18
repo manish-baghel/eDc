@@ -2,8 +2,8 @@ var Sequelize = require('sequelize');
 var bcrypt = require('bcrypt-nodejs');
 
 // create a sequelize instance with our local postgres database information.
-var sequelize = new Sequelize('edc','root','PASSWORD',{
-    host:'localhost',
+var sequelize = new Sequelize('edc',process.env.RDS_USERNAME,process.env.RDS_PASSWORD,{
+    host:process.env.RDS_HOSTNAME,
     dialect: 'mysql',
 
     pool: {
