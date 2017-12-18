@@ -77,14 +77,14 @@ function admin(req,res,next){
 }
 function company(req,res,next){
     // requireRole(req,res,next,'company');
-    if(sessionChecker(req,res,next,'company'))
+    // if(sessionChecker(req,res,next,'company'))
     res.render('company/company.ejs',{
         user:req.session.user
     });
 }
 function member(req,res,next){
     // requireRole(req,res,next,'member');
-    if(sessionChecker(req,res,next,'member'))
+    // if(sessionChecker(req,res,next,'member'))
     res.render('user/intern_listing.ejs',{
         user:req.session.user
     });
@@ -204,6 +204,8 @@ function companyPost(req,res,next){
     perk +='preplacement offer';
     var today = new Date();
     var form = {
+        company: req.session.user.name,
+        title: req.body.job_title,
         profile: req.body.profile_primary,
         openings: req.body.open_positions,
         location:req.body.location,
@@ -211,13 +213,14 @@ function companyPost(req,res,next){
         jobType:req.body.type,
         end:req.body.start_date_2,
         start: req.body.start_date_1,
+        applyby:req.body.last_date,
         Stipend: req.body.salary,
         perks: perk,
         skills: req.body.skill,
         posted_on:today
     }
-
-   console.log('INSERT INTO form SET '+ form);
+    // console.log(req.session);
+   // console.log('INSERT INTO form SET '+ form);
     var query = connection.query('INSERT INTO form SET ?',form,function(err,results,fields){
         if(err){
             res.json({

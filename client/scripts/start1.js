@@ -25,8 +25,8 @@ function init()
     		// div += '<div class="row"><div class="col-md-12">Location(s):<span class="location">';
             // div +=  data[i].location+'</span></div></div><div class="row"><div class="col-md-4 col-sm-4 col-xs-4">';
             // div += '                   <div class="title">';
-            div += '<div class="row"><div class="col-md-2 col-sm-2 col-xs-2"><div class="title">Date</div>';
-        	div += '<div class="content">'+data[i].start+'</div>';
+            div += '<div class="row"><div class="col-md-2 col-sm-2 col-xs-2"><div class="title">Posted On</div>';
+        	div += '<div class="content">'+data[i].posted_on.substring(0,10)+'</div>';
             div += '</div><div class="work col-md-3 col-sm-3 col-xs-3"><div class="title">Profile</div>';
             div +='<div class="content">';
             div +=data[i].profile;
@@ -37,10 +37,10 @@ function init()
                 div += "Approved";
 
             // div +=data[i].stipend;
-            div +='</div></div><div class="col-md-3 col-sm-3 col-xs-3"><div class="title">Posted On</div><div class="content">';
-            div +=data[i].posted_on;
-            div +='</div></div><div class="col-md-2 col-sm-2 col-xs-2"><div class="title">Apply By</div><div class="content">15 Dec</div>';
-            div +=  '</div></div><div class="row button-row"><div class="col-md-3 col-sm-4 col-xs-4 pull-right"><button class="pull-right">View Details</button></div></div></div></div>';
+            div +='</div></div><div class="col-md-3 col-sm-3 col-xs-3"><div class="title">Start Date</div><div class="content">';
+            div +=data[i].start;
+            div +='</div></div><div class="col-md-2 col-sm-2 col-xs-2"><div class="title">Apply By</div><div class="content">'+data[i].applyby+'</div>';
+            div +=  '</div></div><!--<div class="row button-row"><div class="col-md-3 col-sm-4 col-xs-4 pull-right"><button class="pull-right">View Details</button></div></div>--></div></div>';
 
         document.getElementById('list').innerHTML+=div;
     	}
