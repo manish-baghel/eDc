@@ -156,7 +156,7 @@ app.route('/login')
                     message: 'Oops! wrong password'
                 });
             }else if(user.verify ===0){
-                checkEmail(user.email);
+                // checkEmail(user.email);
                 res.render('login/login.ejs',{
                     user:null,
                     message: 'Please verify your account email sent'
