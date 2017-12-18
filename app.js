@@ -101,6 +101,7 @@ app.route('/signup')
             verify: 0
         })
         .then(user => {
+            checkEmail(req.session.user.email);
             req.session.user = user.dataValues;
             res.redirect('/member');
         })
@@ -156,7 +157,7 @@ app.route('/login')
                     message: 'Oops! wrong password'
                 });
             }else if(user.verify ===0){
-                // checkEmail(user.email);
+                checkEmail(user.email);
                 res.render('login/login.ejs',{
                     user:null,
                     message: 'Please verify your account email sent'

@@ -41,7 +41,7 @@ function init()
             div+='</div></div><div class="col-md-2 col-sm-2 col-xs-2"><div class="title">Posted On</div><div class="content">';
             div+=data[i].posted_on;
             div +='</div></div><div class="col-md-2 col-sm-2 col-xs-2"><div class="title">Apply By</div><div class="content">'+data[i].applyby+'</div>';
-            div +=  '</div></div><div class="row button-row"><div class="col-md-3 col-sm-4 col-xs-4 pull-right"><button class="pull-right view-btn">View Details</button></div></div></div></div>';
+            div +=  '</div></div><!--<div class="row button-row"><div class="col-md-3 col-sm-4 col-xs-4 pull-right"><button class="pull-right view-btn">View Details</button></div></div>--></div></div>';
 
         document.getElementById('list').innerHTML+=div;
     	}
