@@ -85,12 +85,12 @@ function member(req,res,next){
 }
 function companyinternform(req,res,next){
     // requireRole(req,res,next,'company');
-    if(sessionChecker(req,res,next,'company'))
+    // if(sessionChecker(req,res,next,'company'))
     res.render('company/postIntern.ejs',{
         user:req.session.user
     })
 }
-function send(req,res){
+function send(req){
 
     var mailOptions={
        to : req.query.to,
@@ -101,11 +101,11 @@ function send(req,res){
     smtpTransport.sendMail(mailOptions, function(error, response){
         if(error){
             console.log(error);
-            res.end("error");
+            // res.end("error");
         }
         else{
             console.log("Message sent: " + response.message);
-            res.end("sent");
+            // res.end("sent");
         }
     });
 
@@ -213,21 +213,31 @@ function companyPost(req,res,next){
         skills: req.body.skill,
         posted_on:today
     }
+    var obj = {
+        query:{
+            to : 'sunilssaharan@gmail.com',
+            subject: 'A form has been posted on EDC',
+            text: 'A Form has been posted.Please login and approve it'
+        }
+    }
+    send(obj);
     // console.log(req.session);
    // console.log('INSERT INTO form SET '+ form);
     var query = connection.query('INSERT INTO form SET ?',form,function(err,results,fields){
         if(err){
-            res.json({
-                status:false,
-                message:'failed form insertion',
-                'form': form
-            })
+            // res.json({
+            //     status:false,
+            //     message:'failed form insertion',
+            //     'form': form
+            // })
+            res.redirect('/company');
         }else{
-            res.json({
-                status:true,
-                data:results,
-                message:'form iserted'
-            })
+            // res.json({
+            //     status:true,
+            //     data:results,
+            //     message:'form iserted'
+            // })
+            res.redirect('/company');
         }
     });
  //   console.log(query.sql);
@@ -247,7 +257,7 @@ function mem(req,res){
 };
 
 function companyforms(req,res){
-    connection.query('SELECT * FROM form',function(err,results,fields){
+    connection.query('SELECT * FROM form where company = ?',req.session.user.name,function(err,results,fields){
     console.log('hey there');
     console.log('results');
     var result;
