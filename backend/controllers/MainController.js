@@ -77,14 +77,14 @@ function admin(req,res,next){
 }
 function company(req,res,next){
     // requireRole(req,res,next,'company');
-    // if(sessionChecker(req,res,next,'company'))
+    if(sessionChecker(req,res,next,'company'))
     res.render('company/company.ejs',{
         user:req.session.user
     });
 }
 function member(req,res,next){
     // requireRole(req,res,next,'member');
-    // if(sessionChecker(req,res,next,'member'))
+    if(sessionChecker(req,res,next,'member'))
     res.render('user/intern_listing.ejs',{
         user:req.session.user
     });
