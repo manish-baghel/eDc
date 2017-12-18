@@ -19,6 +19,7 @@ router.route('/company').get(mainController.company);
 router.route('/company/postintern').get(mainController.companyinternform);
 // router.route('/logout').get(mainController.logout);
 router.route('/send').get(mainController.logout);
+router.route('/team').get(mainController.team);
 // router.route('/signup').get(mainController.signup);
 //==============================================================
 //================  SPECIAL GET REQUEST ========================

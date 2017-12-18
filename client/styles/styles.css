@@ -836,6 +836,10 @@ label {
                 text-align: center;
                 box-shadow: 0px -7px 7px -10px #000;
                 font-size: 16px; }
+                #dashboard .container-fluid .row .options .container-fluid .row div span a{
+                  text-transform:none;
+                  color: #333;
+                 }
               #dashboard .container-fluid .row .options .container-fluid .row div:hover {
                 cursor: pointer; }
       #dashboard .container-fluid .row .internships {
@@ -845,6 +849,8 @@ label {
           border-bottom: 1px solid #ddd;
           box-shadow: 0px 3px 15px -2px #000;
           padding: 0px 0; }
+          #dashboard .container-fluid .row .internships .individual-intern .container-fluid {
+            min-height:180px;}
           #dashboard .container-fluid .row .internships .individual-intern .container-fluid header {
             border-bottom: 0;
             padding: 10px;
