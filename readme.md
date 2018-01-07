@@ -1,5 +1,5 @@
-eDc APPLICATION  using NodeJS
-GULP-Frontend Stuff only
+eDc application using NodeJS by sunil-sopho and manish-baghel
+
 
 Don't forget to run $ npm install
 If things don't workout then follow below code:-
